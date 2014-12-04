@@ -14,6 +14,8 @@
   github_project = 'labibi'
 #}
 
+{%- set render_sidebar = 0 %}
+
 {##################################################}
 {# for plone-derived "edit me" & Google analytics #}
 {##################################################}
@@ -67,17 +69,14 @@
 
 {% endif %}
 
-<script type="text/javascript">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', {{ google_analytics_id }}]);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  ga('create', '{{ google_analytics_id }}', 'auto');
+  ga('send', 'pageview');
 
 </script>
 
@@ -120,25 +119,23 @@
 </style>
 {% endif %}
 
-{% if google_analytics_id %}
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-16853172-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-{% else %}
-<!-- Google Analytics JS is disabled; set google_analytics_id -->
-{% endif %}
 {% endblock %}
 
 {%- block body %}
   {{ super() }}
+
+<hr>
+
+<font size="-1"><b>LICENSE:</b>
+This documentation and all textual/graphic site content is licensed
+under the <a href='http://creativecommons.org/publicdomain/zero/1.0/'>
+Creative Commons - 0 License
+(CC0)</a> -- <a href='https://github.com/ngs-docs/angus'>fork @
+github</a>.  Presentations (PPT/PDF) and PDFs are the property of
+their respective owners and are under the terms indicated within the
+presentation.</font>
+
+<hr>
 
 {% if disqus_shortname %}
   {{ comments() }}
@@ -147,3 +144,12 @@
 {% endif %}
 
 {%- endblock %}
+
+{####}
+
+{% block sidebar2 %}
+{% endblock %}
+
+{% block sidebar1 %}
+{% endblock %}
+
