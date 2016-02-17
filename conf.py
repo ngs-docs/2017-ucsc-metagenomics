@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'2014-msu-rnaseq'
+project = u'2014-labibi'
 copyright = u'2014, C. Titus Brown'
 
 # The version info for the project you're documenting, acts as replacement for
