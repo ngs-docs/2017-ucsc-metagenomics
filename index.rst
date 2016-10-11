@@ -1,54 +1,37 @@
-.. labibi documentation master file, created by
-   sphinx-quickstart on Sun Nov  4 10:10:29 2012.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+2016 / Aug / mRNAseq on non-model organisms
+===========================================
 
-Welcome to the labibi demo site!
-================================
+Parts of this workshop were given on August 18th and 19th, 2016,
+by C. Titus Brown and Phillip T. Brooks, at the University of Puerto
+Rico - Rio Pedras campus.
+
+For more information, please `contact Titus directly
+<mailto:ctbrown@ucdavis.edu>`__.
+
+`We have an EtherPad for sharing text and asking questions <https://public.etherpad-mozilla.org/p/pr-idi-bd2k>`__.
+
+Tutorials:
 
 .. toctree::
    :maxdepth: 2
 
-Labibi is a base package to use for documentation and Web sites for
-other projects of mine.
+   welcome
+   n-overview
+   login
+   n-quality
+   n-diginorm
+   n-assemble
+   
+   n-stats-eval
+   quantification
 
-For now, I've made it fairly easy to post sites to `ReadTheDocs
-<http://readthedocs.org>`__ that enable Google Analytics, Disqus commenting,
-and easy source file editing.  You can check it out at the `labibi demo
-site <http://labibi.readthedocs.org/en/latest/>`__.
+   m-advice
+   more-resources
+   qa
+   n-interacting-with-amazon
+   install
 
-This is directly based off of Mikko Ohtamaa's excellent work on `the
-Plone documentation
-<http://opensourcehacker.com/2012/01/08/readthedocs-org-github-edit-backlink-and-short-history-of-plone-documentation/>`__.
+Technical information
+~~~~~~~~~~~~~~~~~~~~~
 
-A brief HOWTO do this for your own ReadTheDocs site:
-
-  0. `Get started with ReadTheDocs <https://docs.readthedocs.org/en/latest/getting_started.html>`__.
-
-  1. Create a _static/ directory and put `labibi.css <https://raw.github.com/ctb/labibi/master/_static/labibi.css>`__ and `labibi.js <https://raw.github.com/ctb/labibi/master/_static/labibi.js>`__ in it.
-
-  2. Put "html_style = 'labibi.css'" in your conf.py
-
-  3. Create a _templates/ directory and put `page.html <https://raw.github.com/ctb/labibi/master/_templates/page.html>`__ in there.
-
-  4. Edit 'page.html' to set your google analytics, disqus, and github info.
-
-For now, you can't disable the editing functionality, but if you
-delete the google_analytics and disqus_shortname it should disable
-that functionality on your site.
-
-The labibi source code is `here <https://github.com/ctb/labibi>`__ for
-your checking-out pleasure.
-
-I've put up a short blog post `here <http://ivory.idyll.org/blog/rtd-comments-and-editing.html>`__.
-
---titus
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+The github repository for this workshop is publicly available at https://github.com/ngs-docs/2016-mar-nonmodel.

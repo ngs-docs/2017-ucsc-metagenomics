@@ -44,8 +44,8 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'2014-labibi'
-copyright = u'2014, C. Titus Brown'
+project = u'2016-metagenomics-sio'
+copyright = u'2016, C. Titus Brown and Harriet Alexander'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
