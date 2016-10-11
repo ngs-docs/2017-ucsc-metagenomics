@@ -10,6 +10,17 @@ For more information, please `contact Titus directly
 
 `We have an EtherPad for sharing text and asking questions <https://public.etherpad-mozilla.org/p/2016-sio>`__.
 
+Rough schedule:
+
+* Wed, 9am-noon: Amazon Web Services; short reads, QC, and trimming.
+
+* Wed, 1-4pm: Assembly, annotation, and evaluation.
+
+* Th, 9am-noon: TBD
+
+* Th, 1-4pm: TBD
+
+
 Tutorials:
 
 .. toctree::
