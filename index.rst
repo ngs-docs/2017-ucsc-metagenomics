@@ -16,14 +16,12 @@ Rough schedule:
   - Logging into AWS
   - Read quality evaluation and FASTQ trimming (FASTQC, Trimmomatic)
   - (Optional) K-mer spectral error analysis and trimming (khmer)
-
 * Wed, 1-4pm: Assembly, annotation, and evaluation.
   - Short-read assembly with MEGAHIT
   - Advantages and drawbacks to assembly (discussion)
   - Evaluating assembly results (mapping rates, etc.)
   - Annotating assembly (Prokka)
   - Abundance calculations
-
 * Th: topics TBD. Possible topics:
   - Abundance comparisons between samples
   - CIRCOS plots
