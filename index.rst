@@ -1,8 +1,8 @@
-2016 / Aug / mRNAseq on non-model organisms
-===========================================
+2016 / October / Metagenomics
+=============================
 
-Parts of this workshop were given on October 12th and 13th, 2016,
-by C. Titus Brown and Harriet Alexander, at the Scripps Institute of
+This workshop was given on October 12th and 13th, 2016,
+by Harriet Alexander and C. Titus Brown, at the Scripps Institute of
 Oceanography.
 
 For more information, please `contact Titus directly
@@ -16,16 +16,9 @@ Tutorials:
    :maxdepth: 2
 
    welcome
-   n-overview
-   n-quality
    
-   m-advice
-   more-resources
-   qa
-   n-interacting-with-amazon
-   install
-
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
 
-The github repository for this workshop is publicly available at https://github.com/ngs-docs/2016-mar-nonmodel.
+The github repository for this workshop is public at
+https://github.com/ngs-docs/2016-metagenomics-sio
