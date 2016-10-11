@@ -42,6 +42,7 @@ Tutorials:
    welcome
    aws/index
    quality
+   assemble
    
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
