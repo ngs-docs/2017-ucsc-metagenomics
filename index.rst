@@ -41,6 +41,7 @@ Tutorials:
 
    welcome
    aws/index
+   quality
    
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
