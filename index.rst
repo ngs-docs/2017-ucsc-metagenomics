@@ -27,6 +27,7 @@ Tutorials:
    :maxdepth: 2
 
    welcome
+   aws/index
    
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
