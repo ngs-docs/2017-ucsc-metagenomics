@@ -24,9 +24,9 @@ question will help others!
 3. Instructor introductions
 ---------------------------
 
-Titus Brown - prof at UC Davis in the School of Vet Med.
+Harriet Alexander - postdoc at UC Davis.
 
-Phil Brooks - postdoc at UC Davis.
+Titus Brown - prof at UC Davis in the School of Vet Med.
 
 4. Amazon and cloud computing - why?!
 -------------------------------------
