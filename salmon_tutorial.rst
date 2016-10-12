@@ -50,7 +50,7 @@ Now, we can quantify our reads against this reference:
   for file in *.pe.fq.gz.1.fq
   do
   tail1=.abundtrim.subset.pe.fq.gz.1.fq
-  tail2=.abundtrim.subset.pe.fq.gz.1.fq
+  tail2=.abundtrim.subset.pe.fq.gz.2.fq
   BASE=${file/$tail1/}
   salmon quant -i transcript_index --libType IU \
         -1 $BASE$tail1 -2 $BASE$tail2 -o $BASE.quant;
