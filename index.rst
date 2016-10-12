@@ -23,7 +23,7 @@ Rough schedule:
  - Annotating assembly (Prokka)
  - Abundance calculations
 * Thursday: topics TBD from below, or others:
- - Biolog and bioinformatics:
+ - Biology and bioinformatics:
   - Abundance comparisons between samples
   - Taxonomic analysis of reads and assemblies
   - Genome binning
