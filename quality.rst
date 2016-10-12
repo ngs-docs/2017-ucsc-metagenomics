@@ -145,18 +145,18 @@ Now type 'ls'::
 
 to list the files, and you should see:
 ::
-   SRR1976948_1.extract_fastqc
-   SRR1976948_1.extract_fastqc.zip
-   SRR1976941_2.extract_fastqc
-   SRR1976948_2.extract_fastqc.zip
+   SRR1976948_1_fastqc.html
+   SRR1976948_1_fastqc.zip
+   SRR1976948_2_fastqc.html
+   SRR1976948_2_fastqc.zip
 
 We are *not* going to show you how to look at these files right now -
 you need to copy them to your local computer to do that.  We'll show
 you that tomorrow.  But! we can show you what they look like, because
 I've made copies of them for you:
 
-* `0Hour_ATCACG_L002_R1_001.extract_fastqc/fastqc_report.html <http://2015-may-nonmodel.readthedocs.org/en/latest/_static/0Hour_ATCACG_L002_R1_001.extract_fastqc/fastqc_report.html>`__
-* `0Hour_ATCACG_L002_R2_001.extract_fastqc/fastqc_report.html <http://2015-may-nonmodel.readthedocs.org/en/latest/_static/0Hour_ATCACG_L002_R2_001.extract_fastqc/fastqc_report.html>`__
+* `SRR1976948_1_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_1_fastqc/fastqc_report.html>`__
+* `SRR1976948_2_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_2_fastqc/fastqc_report.html>`__
 
 Questions:
 
@@ -225,8 +225,8 @@ Run FastQC again on the trimmed files::
 
 And now view my copies of these files: 
 
-* `0Hour_ATCACG_L002_R1_001.qc.fq_fastqc/fastqc_report.html <http://2015-may-nonmodel.readthedocs.org/en/latest/_static/0Hour_ATCACG_L002_R1_001.qc.fq_fastqc/fastqc_report.html>`__
-* `0Hour_ATCACG_L002_R2_001.qc.fq_fastqc/fastqc_report.html <http://2015-may-nonmodel.readthedocs.org/en/latest/_static/0Hour_ATCACG_L002_R2_001.qc.fq_fastqc/fastqc_report.html>`__
+* `SRR1976948_1.qc_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_1.qc_fastqc/fastqc_report.html>`__
+* `SRR1976948_2.qc_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_2.qc_fastqc/fastqc_report.html>`__
 
 Let's take a look at the output files::
 
