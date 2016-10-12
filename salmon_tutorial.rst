@@ -40,11 +40,10 @@ Create the salmon index:
 
 Salmon requires that paired reads be separated into two files. We can split the reads using the XXX script XXX: *CHECK ME!*
 ::
-  for file in *fq.gz
+  for file in *.abundtrim.subset.pe.fq.gz
   do
     split-reads.py $file
   done
-
 
 Now, we can run our reads against this reference:
 ::
@@ -58,14 +57,14 @@ Now, we can run our reads against this reference:
 
 This will create a bunch of directories named after the fastq files that we just pushed through. Take a look at what files there are within one of these directories: **FIX**
 ::
-  find SRR.quant -type f
+  find SRR1976948.quant -type f
 
 Working with count data
 =======================
 
 Now, the ``quant.sf`` files actually contain the relevant information about expression – take a look:
 ::
-  head -10 SRR***.quant/quant.sf
+  head -10 SRR1976948.quant/quant.sf
 
 The first column contains the transcript names, and the fourth column is what we will want down the road - the normalized counts (TPM). However, they’re not in a convenient location / format for use; let's fix that.
 
@@ -75,8 +74,7 @@ Download the gather-counts.py script:
 and run it:
 
   python ./gather-counts.py
-This will give you a bunch of .counts files, processed from the quant.sf files and named for the directory they are in.
-
+This will give you a bunch of .counts files, which are processed from the quant.sf files and named for the directory from which they emanate.
 
 References
 ===========
