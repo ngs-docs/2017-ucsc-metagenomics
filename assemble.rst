@@ -17,9 +17,13 @@ Now, download some data::
    curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz
    curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249.abundtrim.subset.pe.fq.gz
 
-These are data that have been run through the @@trimming.
+These are data that have been run through k-mer abundance trimming
+(see :doc:`kmer_trimming`) and subsampled so that we can run an assembly
+in a fairly short time period :).
 
-And, finally, run the assembler! ::
+----
+
+Now, finally, run the assembler! ::
 
    mkdir /mnt/assembly
    cd /mnt/assembly
@@ -61,6 +65,19 @@ MiSeq, and PacBio?
 
 What kind of experimental design considerations should you have if you
 plan to assemble?
+
+Some figures: the first two come from work by Dr. Sherine Awad on
+analyzing the data from Shakya et al (2014).  The third comes from
+an analysis of read search vs contig search of a protein database.
+
+.. thumbnail:: files/assembler-runtimes.png
+   :width: 20%
+           
+.. thumbnail:: files/assembler-mapping.png
+   :width: 20%
+
+.. thumbnail:: files/read-vs-contig-alignment.png
+   :width: 20%
 
 
 After the assembly is finished
