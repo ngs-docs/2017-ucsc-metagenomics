@@ -40,14 +40,14 @@ Create the salmon index:
 
 Salmon requires that paired reads be separated into two files. We can split the reads using the XXX script XXX: *CHECK ME!*
 ::
-  for file in *.abundtrim.subset.pe.fq
+  for file in *.abundtrim.subset.pe.fq.gz
   do
     split-reads.py $file
   done
 
 Now, we can run our reads against this reference:
 ::
-  for file in *1.fq
+  for file in *1.fq.gz
   do
   BASE=${file/.1.fq/}
   salmon quant -i transcript_index --libType IU \
@@ -55,7 +55,7 @@ Now, we can run our reads against this reference:
 
 (Note that --libType must come before the read files!)
 
-This will create a bunch of directories named after the fastq files that we just pushed through. Take a look at what files there are within one of these directories: **FIX**
+This will create a bunch of directories named after the fastq files that we just pushed through. Take a look at what files there are within one of these directories:
 ::
   find SRR1976948.quant -type f
 
