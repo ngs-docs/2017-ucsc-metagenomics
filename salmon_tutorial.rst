@@ -38,7 +38,7 @@ Create the salmon index:
 ::
   salmon index -t metag_10112016.ffn -i transcript_index --type quasi -k 31
 
-Salmon requires that paired reads be separated into two files. We can split the reads using the ``split-paired-reads.py`` from the khmer package: 
+Salmon requires that paired reads be separated into two files. We can split the reads using the ``split-paired-reads.py`` from the ``khmer`` package: 
 ::
   for file in *.abundtrim.subset.pe.fq.gz
   do
