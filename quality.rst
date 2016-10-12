@@ -146,10 +146,10 @@ Now type 'ls'::
 to list the files, and you should see::
 
 .. @@
-   0Hour_ATCACG_L002_R1_001.extract_fastqc
-   0Hour_ATCACG_L002_R1_001.extract_fastqc.zip
-   0Hour_ATCACG_L002_R2_001.extract_fastqc
-   0Hour_ATCACG_L002_R2_001.extract_fastqc.zip
+   SRR1976948_1.extract_fastqc
+   SRR1976948_1.extract_fastqc.zip
+   SRR1976941_2.extract_fastqc
+   SRR1976948_2.extract_fastqc.zip
 
 We are *not* going to show you how to look at these files right now -
 you need to copy them to your local computer to do that.  We'll show
@@ -183,7 +183,7 @@ The first thing we'll need are the adapters to trim off::
 Now, to run Trimmomatic::
 
    TrimmomaticPE SRR1976948_1.fastq.gz \
-                 SRR1976948_1.fastq.gz \
+                 SRR1976948_2.fastq.gz \
         SRR1976948_1.qc.fq.gz s1_se \
         SRR1976948_2.qc.fq.gz s2_se \
         ILLUMINACLIP:TruSeq2-PE.fa:2:40:15 \
@@ -222,8 +222,8 @@ Links:
 
 Run FastQC again on the trimmed files::
 
-   fastqc SRR1976948_1.fastq.gz
-   fastqc SRR1976948_2.fastq.gz
+   fastqc SRR1976948_1.qc.fastq.gz
+   fastqc SRR1976948_2.qc.fastq.gz
 
 And now view my copies of these files: 
 
