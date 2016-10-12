@@ -1,14 +1,14 @@
-[SRR1976948_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_1.fastq.gz) - 1st mn reads
+[SRR1976948_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_1.fastq.gz) - First 1m reads of the SRA record
 
-[SRR1976948_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_2.fastq.gz) - 1st mn reads
+[SRR1976948_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_2.fastq.gz) - First 1m reads of the SRA record
 
-[SRR1977249_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249_1.fastq.gz) - 1st mn reads
+[SRR1977249_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249_1.fastq.gz) - First 1m reads of the SRA record
 
-[SRR1977249_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249_2.fastq.gz) - 1st mn reads
+[SRR1977249_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249_2.fastq.gz) - First 1m reads of the SRA record
 
-[SRR1977296_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977296_1.fastq.gz) - 1st mn reads
+[SRR1977296_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977296_1.fastq.gz) - First 1m reads of the SRA record
 
-[SRR1977296_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977296_2.fastq.gz) - 1st mn reads
+[SRR1977296_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977296_2.fastq.gz) - First 1m reads of the SRA record
 
 [SRR1976948.abundtrim.subset.pe.fq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz) - abundtrim/subset swept/PE
 
