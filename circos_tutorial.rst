@@ -25,7 +25,7 @@ Circos runs within Perl and as such does not need to be compiled to run. So, we 
 ::
     export PATH=~/circos/circos-0.69-3/bin:$PATH
 
-Circos does, however, require quite a few additional perl modules to opperate correctly. To see what modules are missing and need to be downloaded type the following:
+Circos does, however, require quite a few additional perl modules to operate correctly. To see what modules are missing and need to be downloaded type the following:
 ::
     circos -modules > modules
 
@@ -64,7 +64,7 @@ And with that, circos should be up and ready to go. Run the example by navigatin
 
 This will take a little bit to run but should generate a file called ``circos.png``.  Open it and you can get an idea of the huge variety of things that are possible with circos and a lot of patience. We will not be attempting anything that complex today, however.
 
-Compairing our assembly
+Comparing our assembly
 =======================
 Create a reference database for blastn:
 ::
