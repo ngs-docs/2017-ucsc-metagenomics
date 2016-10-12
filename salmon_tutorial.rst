@@ -2,17 +2,19 @@
 Gene Abundance Estimation with Salmon
 ======================================
 
-Salmon is one of a breed of new, very fast RNAseq counting packages. Like Kallisto and Sailfish, Salmon counts fragments without doing up-front read mapping. Salmon can be used with edgeR and others to do differential expression analysis.
+Salmon is one of a breed of new, very fast RNAseq counting packages. Like Kallisto and Sailfish, Salmon counts fragments without doing up-front read mapping. Salmon can be used with edgeR and others to do differential expression analysis (if you are quantifying RNAseq data).
+
+Today we will use it to get a handle on the relative distribution of genomic reads across the predicted protein regions.
 
 The goals of this tutorial are to:
 
 *  Install salmon
 *  Use salmon to estimate gene coverage in our metagenome dataset
 
-Installing salmon
+Installing Salmon
 ==================================================
 
-Download and extract the latest version of Salmon and add it to your path:
+Download and extract the latest version of Salmon and add it to your PATH:
 ::
     wget https://github.com/COMBINE-lab/salmon/releases/download/v0.7.2/Salmon-0.7.2_linux_x86_64.tar.gz
     tar -xvzf Salmon-0.7.2_linux_x86_64.tar.gz
@@ -29,13 +31,52 @@ Make a new directory for the quantification of data with Salmon:
 
 Grab the nucleotide (``*ffn``) predicted protein regions from Prokka and link them here. Also grab the trimmed sequence data (``*fq``)
 ::
-    ln -fs annotation/prokka_annotation *ffn .
+    ln -fs annotation/prokka_annotation/*ffn .
     ln -fs data/*.abundtrim.subset.pe.fq.gz .
 
 Create the salmon index:
 ::
-  ~/Salmon-0.7.2_linux_x86_64/bin/salmon index -t PROKKA_10112016.ffn -i transcript_index --type quasi -k 31
-  
+  salmon index -t metag_10112016.ffn -i transcript_index --type quasi -k 31
+
+Salmon requires that paired reads be separated into two files. We can split the reads using the XXX script XXX: *CHECK ME!*
+::
+  for file in *fq.gz
+  do
+    split-reads.py $file
+  done
+
+
+Now, we can run our reads against this reference:
+::
+  for file in *1.fq
+  do
+  BASE=${file/.1.fq/}
+  salmon quant -i transcript_index --libType IU \
+        -1 $BASE.1.fq -2 $BASE.2.fq -o $BASE.quant;
+
+(Note that --libType must come before the read files!)
+
+This will create a bunch of directories named after the fastq files that we just pushed through. Take a look at what files there are within one of these directories: **FIX**
+::
+  find SRR.quant -type f
+
+Working with count data
+=======================
+
+Now, the ``quant.sf`` files actually contain the relevant information about expression – take a look:
+::
+  head -10 SRR***.quant/quant.sf
+
+The first column contains the transcript names, and the fourth column is what we will want down the road - the normalized counts (TPM). However, they’re not in a convenient location / format for use; let's fix that.
+
+Download the gather-counts.py script:
+::
+  curl -L -O https://github.com/ngs-docs/2016-aug-nonmodel-rnaseq/raw/master/files/gather-counts.py
+and run it:
+
+  python ./gather-counts.py
+This will give you a bunch of .counts files, processed from the quant.sf files and named for the directory they are in.
+
 
 References
 ===========

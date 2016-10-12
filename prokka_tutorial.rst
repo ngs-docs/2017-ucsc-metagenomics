@@ -48,7 +48,7 @@ Now it is time to run Prokka! There are tons of different ways to specialize the
 
 This will generate a new folder called ``prokka_annotation`` in which will be a series of files, which are detailed `here <https://github.com/tseemann/prokka/blob/master/README.md#output-files>`__.
 
-In particular, we will be using the ``*.ffn`` file to assess
+In particular, we will be using the ``*.ffn`` file to assess the relative read coverage within our metagenomes across the predicted genomic regions.
 
 References
 ===========
