@@ -1,11 +1,15 @@
 Short read quality and trimming
 ===============================
 
-@@Harriet, (Boot ami-05384865 and add 100 GB of storage on sdb.)
+Start up an instance with ami-05384865 and 200 GB of local storage
+(:doc:`aws/boot`).  You should also configure your firewall
+(:doc:`aws/configure-firewall`) to pass through TCP ports 8000-8888.
 
-First, `Log into your computer <aws/login-shell.html>`__.
+Then, `Log into your computer <aws/login-shell.html>`__.
 
-OK, you should now be logged into your Amazon computer!  You should see
+---
+
+You should now be logged into your Amazon computer!  You should see
 something like this::
 
    ubuntu@ip-172-30-1-252:~$
@@ -18,15 +22,9 @@ Prepping the computer
 Before we do anything else, we need to set up a place to work and
 install a few things.
 
-.. @@CTB /dev/xvdb
-   
-First, let's set up a place to work::
+First, let's set up a place to work.  Here, we'll make /mnt writeable::
 
-   mkfs -t ext4 /dev/xvdb
-   mount /dev/xvdb /mnt
    sudo chmod a+rwxt /mnt
-
-This makes '/mnt' a place where we can put data and working files.
 
 .. note::
 
@@ -44,22 +42,53 @@ Installing some software
 Run::
 
   sudo apt-get -y update && \
-  sudo apt-get -y install r-base python3-matplotlib libzmq3-dev python3.5-dev \
-     texlive-latex-extra texlive-latex-recommended python3-virtualenv \
-     trimmomatic fastqc python-pip python-dev \
-     bowtie samtools zlib1g-dev ncurses-dev
+  sudo apt-get -y install trimmomatic fastqc python-pip \
+     samtools zlib1g-dev ncurses-dev
 
-  sudo pip install -U setuptools khmer==2.0 jupyter jupyter_client ipython
+Install anaconda::
 
+  curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+  bash Anaconda3-4.2.0-Linux-x86_64.sh
+
+Then update your environment and install khmer::
+
+  source ~/.bashrc
+  pip install khmer==2.0
+
+Running Jupyter Notebook
+------------------------
+
+Let's also run a Jupyter Notebook in /mnt. First, configure it a teensy bit
+more securely, and also have it run in the background::
+
+  jupyter notebook --generate-config
+  
+  cat >>/home/ubuntu/.jupyter/jupyter_notebook_config.py <<EOF
+  c = get_config()
+  c.NotebookApp.ip = '*'
+  c.NotebookApp.open_browser = False
+  c.NotebookApp.password = u'sha1:5d813e5d59a7:b4e430cf6dbd1aad04838c6e9cf684f4d76e245c'
+  c.NotebookApp.port = 8000
+
+  EOF
+
+Now, run! ::
+
+  cd /mnt
+  jupyter notebook &
+
+You should be able to visit port 8000 on your AWS computer and see the
+Jupyter console.  (The password is 'davis'.)
 
 Data source
 -----------
 
-.. @@ CTB
-
 We're going to be using a subset of data from `Hu et al.,
 2016 <http://mbio.asm.org/content/7/1/e01669-15.full>`__. This paper
-from the Banfield lab does cool stuff.
+from the Banfield lab samples some relatively low diversity environments
+and finds a bunch of nearly complete genomes.
+
+(See `DATA.md <https://github.com/ngs-docs/2016-metagenomics-sio/blob/work/DATA.md>`__ for a list of the data sets we're using in this tutorial.)
 
 1. Copying in some data to work with.
 -------------------------------------
@@ -150,10 +179,8 @@ to list the files, and you should see:
    SRR1976948_2_fastqc.html
    SRR1976948_2_fastqc.zip
 
-We are *not* going to show you how to look at these files right now -
-you need to copy them to your local computer to do that.  We'll show
-you that tomorrow.  But! we can show you what they look like, because
-I've made copies of them for you:
+You can download these files using your Jupyter Notebook console, if you like;
+or you can look at these copies of them::
 
 * `SRR1976948_1_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_1_fastqc/fastqc_report.html>`__
 * `SRR1976948_2_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_2_fastqc/fastqc_report.html>`__

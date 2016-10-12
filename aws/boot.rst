@@ -42,8 +42,8 @@ Use ami-05384865.
 5. Click on "Select."
 =====================
 
-6. Choose m4.large.
-===================
+6. Choose m4.xlarge.
+====================
 
 .. thumbnail:: images/boot-4.png
    :width: 20%
