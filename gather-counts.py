@@ -53,7 +53,7 @@ def main():
                 
                 break
 
-    print "\n".join([ "\"%s\"" % i for i in sorted(quantlist)])
+    print ",\n".join([ "\"%s\"" % i for i in sorted(quantlist)])
 
 if __name__ == '__main__':
     main()
