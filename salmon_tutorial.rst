@@ -40,7 +40,7 @@ Create the salmon index:
 
 Salmon requires that paired reads be separated into two files. We can split the reads using the XXX script XXX: *CHECK ME!*
 ::
-  for file in *.abundtrim.subset.pe.fq.gz
+  for file in *.abundtrim.subset.pe.fq
   do
     split-reads.py $file
   done
@@ -74,6 +74,7 @@ Download the gather-counts.py script:
 and run it:
 
   python ./gather-counts.py
+  
 This will give you a bunch of .counts files, which are processed from the quant.sf files and named for the directory from which they emanate.
 
 References
