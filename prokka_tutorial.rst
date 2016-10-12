@@ -36,6 +36,7 @@ Running Prokka
 
 Make a new directory for the annotation:
 ::
+    cd /mnt
     mkdir annotation
     cd annotation
 
