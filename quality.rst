@@ -146,10 +146,10 @@ Now type 'ls'::
 to list the files, and you should see::
 
 .. @@
-   0Hour_ATCACG_L002_R1_001.extract_fastqc
-   0Hour_ATCACG_L002_R1_001.extract_fastqc.zip
-   0Hour_ATCACG_L002_R2_001.extract_fastqc
-   0Hour_ATCACG_L002_R2_001.extract_fastqc.zip
+   SRR1976948_1.extract_fastqc
+   SRR1976948_1.extract_fastqc.zip
+   SRR1976941_2.extract_fastqc
+   SRR1976948_2.extract_fastqc.zip
 
 We are *not* going to show you how to look at these files right now -
 you need to copy them to your local computer to do that.  We'll show
