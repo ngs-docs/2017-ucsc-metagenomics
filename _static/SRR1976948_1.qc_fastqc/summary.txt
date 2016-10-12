@@ -1,0 +1,11 @@
+PASS	Basic Statistics	SRR1976948_1.qc.fq.gz
+WARN	Per base sequence quality	SRR1976948_1.qc.fq.gz
+PASS	Per sequence quality scores	SRR1976948_1.qc.fq.gz
+WARN	Per base sequence content	SRR1976948_1.qc.fq.gz
+FAIL	Per sequence GC content	SRR1976948_1.qc.fq.gz
+PASS	Per base N content	SRR1976948_1.qc.fq.gz
+WARN	Sequence Length Distribution	SRR1976948_1.qc.fq.gz
+PASS	Sequence Duplication Levels	SRR1976948_1.qc.fq.gz
+PASS	Overrepresented sequences	SRR1976948_1.qc.fq.gz
+PASS	Adapter Content	SRR1976948_1.qc.fq.gz
+FAIL	Kmer Content	SRR1976948_1.qc.fq.gz
