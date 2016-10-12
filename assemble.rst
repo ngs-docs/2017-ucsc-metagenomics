@@ -85,9 +85,8 @@ After the assembly is finished
 
 At this point we can do a bunch of things:
 
-* annotate the assembly;
+* annotate the assembly (:doc:`prokka_tutorial`);
 * evaluate the assembly's inclusion of k-mers and reads;
 * set up a BLAST database so that we can search it for genes of interest;
-* quantify the abundance of the contigs in the assembly in the original read
-  data set;
+* quantify the abundance of the contigs or genes in the assembly, using the original read data set (:doc:`salmon_tutorial`);
 * bin the contigs in the assembly into species bins;
