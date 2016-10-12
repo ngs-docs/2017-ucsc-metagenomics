@@ -42,15 +42,17 @@ Salmon requires that paired reads be separated into two files. We can split the 
 ::
   for file in *.abundtrim.subset.pe.fq.gz
   do
-    split-paired-reads.py $file
+    tail=.fq.gz
+    BASE=${file/$tai/}
+    split-paired-reads.py $BASE$tail -1 ${file}.1.fq -2 ${file}.2.fq
   done
 
 Now, we can quantify our reads against this reference:
 ::
-  for file in *.pe.fq.gz.1.fq
+  for file in *.pe.1.fq
   do
-  tail1=.abundtrim.subset.pe.fq.gz.1.fq
-  tail2=.abundtrim.subset.pe.fq.gz.2.fq
+  tail1=.abundtrim.subset.pe.1.fq
+  tail2=.abundtrim.subset.pe.2.fq
   BASE=${file/$tail1/}
   salmon quant -i transcript_index --libType IU \
         -1 $BASE$tail1 -2 $BASE$tail2 -o $BASE.quant;
