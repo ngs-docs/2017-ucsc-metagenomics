@@ -184,7 +184,7 @@ to list the files, and you should see:
    SRR1976948_2_fastqc.zip
 
 You can download these files using your Jupyter Notebook console, if you like;
-or you can look at these copies of them::
+or you can look at these copies of them:
 
 * `SRR1976948_1_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_1_fastqc/fastqc_report.html>`__
 * `SRR1976948_2_fastqc/fastqc_report.html <http://2016-metagenomics-sio.readthedocs.io/en/work/_static/SRR1976948_2_fastqc/fastqc_report.html>`__
