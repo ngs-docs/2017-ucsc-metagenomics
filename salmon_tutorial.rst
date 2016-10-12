@@ -45,7 +45,7 @@ Salmon requires that paired reads be separated into two files. We can split the 
     split-reads.py $file
   done
 
-Now, we can run our reads against this reference:
+Now, we can quantify our reads against this reference:
 ::
   for file in *.pe.fq.gz.1
   do
