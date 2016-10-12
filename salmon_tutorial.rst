@@ -47,12 +47,13 @@ Salmon requires that paired reads be separated into two files. We can split the 
 
 Now, we can quantify our reads against this reference:
 ::
-  for file in *.pe.fq.gz.1
+  for file in *.pe.fq.gz.1.fq
   do
-  tail=.abundtrim.subset.pe.fq.gz.1
-  BASE=${file/$tail/}
+  tail1=.abundtrim.subset.pe.fq.gz.1.fq
+  tail2=.abundtrim.subset.pe.fq.gz.1.fq
+  BASE=${file/$tail1/}
   salmon quant -i transcript_index --libType IU \
-        -1 $BASE$tail -2 $BASE$tail -o $BASE.quant;
+        -1 $BASE$tail1 -2 $BASE$tail2 -o $BASE.quant;
    done
 (Note that --libType must come before the read files!)
 
