@@ -143,9 +143,8 @@ Now type 'ls'::
 
    ls -d *fastqc*
 
-to list the files, and you should see::
-
-.. @@
+to list the files, and you should see:
+::
    SRR1976948_1.extract_fastqc
    SRR1976948_1.extract_fastqc.zip
    SRR1976941_2.extract_fastqc
