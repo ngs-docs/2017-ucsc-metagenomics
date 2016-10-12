@@ -14,12 +14,13 @@ Installing Prokka
 
 Download and extract the latest version of prokka:
 ::
+    cd ~/
     wget http://www.vicbioinformatics.com/prokka-1.11.tar.gz
     tar -xvzf prokka-1.11.tar.gz
 
 We also will need some dependencies such as bioperl:
 ::
-    sudo apt-get bioperl libdatetime-perl libxml-simple-perl libdigest-md5-perl
+    sudo apt-get install bioperl libdatetime-perl libxml-simple-perl libdigest-md5-perl
     sudo perl -MCPAN -e shell
     sudo perl -MCPAN -e 'install "XML::Simple"'
 
