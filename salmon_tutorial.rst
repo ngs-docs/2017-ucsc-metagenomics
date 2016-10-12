@@ -19,7 +19,7 @@ Download and extract the latest version of Salmon and add it to your PATH:
     wget https://github.com/COMBINE-lab/salmon/releases/download/v0.7.2/Salmon-0.7.2_linux_x86_64.tar.gz
     tar -xvzf Salmon-0.7.2_linux_x86_64.tar.gz
     cd Salmon-0.7.2_linux_x86_64
-    export PATH=$PATH:$HOME $HOME/Salmon-0.7.2_linux_x86_64/bin
+    export PATH=$PATH:$HOME/Salmon-0.7.2_linux_x86_64/bin
 
 Running Salmon
 ==============
@@ -47,12 +47,13 @@ Salmon requires that paired reads be separated into two files. We can split the 
 
 Now, we can run our reads against this reference:
 ::
-  for file in *1.fq.gz
+  for file in *.pe.fq.gz.1
   do
-  BASE=${file/.1.fq/}
+  tail=.abundtrim.subset.pe.fq.gz.1
+  BASE=${file/$tail/}
   salmon quant -i transcript_index --libType IU \
-        -1 $BASE.1.fq -2 $BASE.2.fq -o $BASE.quant;
-
+        -1 $BASE$tail -2 $BASE$tail -o $BASE.quant;
+   done
 (Note that --libType must come before the read files!)
 
 This will create a bunch of directories named after the fastq files that we just pushed through. Take a look at what files there are within one of these directories:
