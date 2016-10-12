@@ -36,7 +36,7 @@ Grab the nucleotide (``*ffn``) predicted protein regions from Prokka and link th
 
 Create the salmon index:
 ::
-  salmon index -t metag_10112016.ffn -i transcript_index --type quasi -k 31
+  salmon index -t metag_10122016.ffn -i transcript_index --type quasi -k 31
 
 Salmon requires that paired reads be separated into two files. We can split the reads using the ``split-paired-reads.py`` from the ``khmer`` package: 
 ::
