@@ -74,7 +74,7 @@ The first column contains the transcript names, and the fourth column is what we
 
 Download the gather-counts.py script:
 ::
-  curl -L -O https://github.com/ngs-docs/2016-aug-nonmodel-rnaseq/raw/master/files/gather-counts.py
+  curl -L -O https://github.com/ngs-docs/2016-metagenomics-sio/blob/master/gather-counts.py
 and run it:
 
   python ./gather-counts.py
