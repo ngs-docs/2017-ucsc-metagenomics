@@ -43,7 +43,7 @@ Run::
 
   sudo apt-get -y update && \
   sudo apt-get -y install trimmomatic fastqc python-pip \
-     samtools zlib1g-dev ncurses-dev
+     samtools zlib1g-dev ncurses-dev python-dev
 
 Install anaconda::
 
@@ -53,7 +53,11 @@ Install anaconda::
 Then update your environment and install khmer::
 
   source ~/.bashrc
-  pip install khmer==2.0
+
+  cd
+  git clone https://github.com/dib-lab/khmer.git
+  cd khmer
+  sudo python2 setup.py install
 
 Running Jupyter Notebook
 ------------------------
@@ -266,6 +270,6 @@ Questions:
 * is the quality trimmed data "better" than before?
 * Does it matter that you still have adapters!?
 
-Optional: trim
+Optional: :doc:`kmer_trimming`
 
 Next: :doc:`assemble`
