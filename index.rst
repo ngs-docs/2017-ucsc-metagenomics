@@ -19,20 +19,26 @@ Rough schedule:
 * Wed, 1-4pm: Assembly, annotation, and evaluation.
  - Short-read assembly with MEGAHIT
  - Advantages and drawbacks to assembly (discussion)
- - Evaluating assembly results (mapping rates, etc.)
+ - Evaluating assembly results (mapping rates, mapping viz, etc.)
  - Annotating assembly (Prokka)
  - Abundance calculations
-* Th: topics TBD. Possible topics:
- - Abundance comparisons between samples
- - CIRCOS plots
- - ShotMap for annotating shotgun reads
- - Taxonomic analysis of reads and assemblies
- - Genome binning
- - Jupyter Notebook or RMarkdown
- - git for version control
- - Docker execution environments
- - Workflow strategies (scripting, make, doit, etc.)
- - More Amazon Web Services: EC2, S3, ...?
+* Thursday: topics TBD from below, or others:
+ - Biolog and bioinformatics:
+  - Abundance comparisons between samples
+  - Taxonomic analysis of reads and assemblies
+  - Genome binning
+  - CIRCOS plots
+  - ShotMap for annotating shotgun reads
+ - Moar computing:
+  - Jupyter Notebook or RMarkdown
+  - git for version control
+  - Docker execution environments
+  - Workflow strategies (scripting, make, doit, etc.)
+  - More Amazon Web Services: EC2, S3, ...?
+ - Miscellany:
+  - Visualizing assembly graphs
+  - MinHash sketches for comparing genomes and metagenomes
+  - Tricks with sequences using Python libraries (screed & khmer)
 
 Tutorials:
 
@@ -42,6 +48,7 @@ Tutorials:
    welcome
    aws/index
    quality
+   kmer_trimming
    assemble
    prokka_tutorial
    salmon_tutorial

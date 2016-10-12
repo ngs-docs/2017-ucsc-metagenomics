@@ -29,6 +29,33 @@ The output assembly will be in ``combined/final.contigs.fa``.
 While the assembly runs...
 --------------------------
 
+.. Graph assembly / What doesn’t get assembled? (Repeats, strain variation)
+.. Sherine work on metagenomics
+.. Our read length figure / soil
+
+How assembly works - whiteboarding the De Bruijn graph approach.
+
+Interpreting the MEGAHIT working output :)
+
+What does, and doesn't, assemble?
+
+How good is assembly anyway?
+
+Discussion:
+
+Why would we assemble, vs looking at raw reads?  What are the
+advantages and disadvantages?
+
+What are the technology tradeoffs between Illumina HiSeq, Illumina
+MiSeq, and PacBio?
+
+What kind of experimental design considerations should you have if you
+plan to assemble?
+
+
+After the assembly is finished
+------------------------------
+
 At this point we can do a bunch of things:
 
 * annotate the assembly;
