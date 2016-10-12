@@ -183,7 +183,7 @@ The first thing we'll need are the adapters to trim off::
 Now, to run Trimmomatic::
 
    TrimmomaticPE SRR1976948_1.fastq.gz \
-                 SRR1976948_1.fastq.gz \
+                 SRR1976948_2.fastq.gz \
         SRR1976948_1.qc.fq.gz s1_se \
         SRR1976948_2.qc.fq.gz s2_se \
         ILLUMINACLIP:TruSeq2-PE.fa:2:40:15 \
@@ -194,9 +194,8 @@ Now, to run Trimmomatic::
 You should see output that looks like this::
 
    ...
-   Quality encoding detected as phred33
-   Input Read Pairs: 140557 Both Surviving: 138775 (98.73%) Forward Only Surviving: 1776 (1.26%) Reverse Only Surviving: 6 (0.00%) Dropped: 0 (0.00%)
-   TrimmomaticPE: Completed successfully   ...
+   Input Read Pairs: 1000000 Both Surviving: 885734 (88.57%) Forward Only Surviving: 114262 (11.43%) Reverse Only Surviving: 4 (0.00%) Dropped: 0 (0.00%)
+   TrimmomaticPE: Completed successfully
 
 Questions:
 
@@ -222,8 +221,8 @@ Links:
 
 Run FastQC again on the trimmed files::
 
-   fastqc SRR1976948_1.fastq.gz
-   fastqc SRR1976948_2.fastq.gz
+   fastqc SRR1976948_1.qc.fq.gz
+   fastqc SRR1976948_2.qc.fq.gz
 
 And now view my copies of these files: 
 
