@@ -42,7 +42,7 @@ Salmon requires that paired reads be separated into two files. We can split the 
 ::
   for file in *.abundtrim.subset.pe.fq.gz
   do
-    split-reads.py $file
+    split-paired-reads.py $file
   done
 
 Now, we can quantify our reads against this reference:
