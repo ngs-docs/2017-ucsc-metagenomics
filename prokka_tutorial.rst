@@ -1,6 +1,6 @@
-======================================
+======================
 Annotation with Prokka
-======================================
+======================
 
 Prokka is a tool that facilitates the fast annotation of prokaryotic genomes.
 
@@ -10,7 +10,7 @@ The goals of this tutorial are to:
 *  Use Prokka to annotate our genomes
 
 Installing Prokka
-==================================================
+=================
 
 Download and extract the latest version of prokka:
 ::
@@ -52,6 +52,7 @@ In particular, we will be using the ``*.ffn`` file to assess
 
 References
 ===========
+
 * http://www.vicbioinformatics.com/software.prokka.shtml
 * https://www.ncbi.nlm.nih.gov/pubmed/24642063
 * https://github.com/tseemann/prokka/blob/master/README.md

@@ -43,6 +43,8 @@ Tutorials:
    aws/index
    quality
    assemble
+   prokka_tutorial
+   salmon_tutorial
    
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
