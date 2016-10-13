@@ -102,6 +102,7 @@ This command should generate an ``circos.svg`` and ``circos.png``. Check out the
 Now, let's take a look at the file that controls this crazy figure-- ``circos.config``.
 
 Try changing a few parameters-- colors, radius, size, to see what you can do. Again, if you are into this type of visualization, do check out the extensive `tutorial  <http://circos.ca/documentation/tutorials/>`__. 
+
 References
 ===========
 * http://genome.cshlp.org/content/early/2009/06/15/gr.092759.109.abstract
