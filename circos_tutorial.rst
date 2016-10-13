@@ -72,7 +72,7 @@ Now, link in the ``*gff`` file output from prokka (which we will use to define t
 
 We also need to grab a set of useful scripts and config files for this plotting exercise:
 ::
-  curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/circos-build.tar.gz
+  curl -L -O https://github.com/ngs-docs/2016-metagenomics-sio/blob/master/circos-build.tar.gz?raw=true
   tar -xvzf circos-build.tar.gz
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/subset_assembly.fa.gz
   gunzip subset_assembly.fa.gz
@@ -84,7 +84,7 @@ We are going to limit the data we are trying to visualize and get longest contig
 
 Next, we will run a script that processes the data from the the files that we just moved to create circos-acceptable files. This is really the crux of using circos: figuring out how to get your data into the correct format.
 ::
-  python parse_data_for_circos.py
+   python parse_data_for_circos.py
 
 If you are interested-- take a look at the script and the input files to see how these data were manipulated.
 
