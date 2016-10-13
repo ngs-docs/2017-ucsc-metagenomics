@@ -6,6 +6,10 @@ Day 2 - installation instructions
 
 Use ami-05384865, with a 500 GB local disk (see: :doc:`aws/boot`)
 
+Make ``/mnt/`` read/write::
+
+  sudo chmod a+rwxt /mnt
+
 Run::
 
   sudo apt-get -y update && \
@@ -30,9 +34,14 @@ Running Jupyter Notebook
 ------------------------
 
 Let's also run a Jupyter Notebook in /mnt. First, configure it a teensy bit
-more securely, and also have it run in the background::
+more securely, and also have it run in the background.
+
+Generate a config::
 
   jupyter notebook --generate-config
+
+Add a password, have it not run a browser, and put it on port 8000
+by default::
   
   cat >>/home/ubuntu/.jupyter/jupyter_notebook_config.py <<EOF
   c = get_config()
@@ -49,7 +58,4 @@ Now, run! ::
   jupyter notebook &
 
 You should be able to visit port 8000 on your AWS computer and see the
-Jupyter console.  (The password is 'davis'.)
-
-
-install khmer
+Jupyter console.
