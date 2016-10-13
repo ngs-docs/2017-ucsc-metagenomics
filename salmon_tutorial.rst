@@ -92,6 +92,31 @@ and run it::
 
 This will give you a bunch of .counts files, which are processed from the quant.sf files and named for the directory from which they emanate.
 
+Plotting the results
+====================
+
+In Jupyter Notebook, open a new Python3 notebook and enter::
+
+  %matplotlib inline
+  import numpy
+  from pylab import *
+
+In another cell::
+
+  cd /mnt/quant
+
+In another cell::
+
+  counts1 = [ x.split()[1] for x in open('SRR1976948.quant.counts')]
+  counts1 = [ float(x) for x in counts1[1:] ]
+  counts1 = numpy.array(counts1)
+
+  counts2 = [ x.split()[1] for x in open('SRR1977249.quant.counts')]
+  counts2 = [ float(x) for x in counts2[1:] ]
+  counts2 = numpy.array(counts2)
+
+  plot(counts1, counts2, '*')
+
 References
 ===========
 * http://salmon.readthedocs.io/en/latest/salmon.html
