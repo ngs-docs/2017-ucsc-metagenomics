@@ -77,6 +77,11 @@ Now, link in the ``*gff`` file output from prokka (which we will use to define t
   ln -fs /mnt/data/final.contigs.fa .
   ln -fs /mnt/quant/*counts .
 
+We also need to grab a set of useful scripts and config files for this plotting exercise:
+::
+  curl -L -O XXXX circos-build.tar.gz
+  tar -xvzf circos-build.tar.gz
+
 We are going to limit the data we are trying to visualize and get longest contigs from our assembly. We can do this using a script from the khmer package:
 ::
   extract-long-sequences.py  final.contigs.fa -l 24000 -o final.contigs.long.fa
@@ -88,9 +93,20 @@ Next, we will run a script that processes the data from the the files that we ju
 
 If you are interested-- take a look at the script and the input files to see how these data were manipulated.
 
-Circos operates off of three main types of files: 1) a karyotype file that defines the size and layout of your "chromosomes", 2) a config files that dictate the style and inputs to your circos plot, and 3) any data files that  you call in your config file that detail attributes you want to plot.
+Circos operates off of three main types of files: 1) a config files that dictate the style and inputs to your circos plot, 2) a karyotype file that defines the size and layout of your "chromosomes", and 3) any data files that  you call in your config file that detail attributes you want to plot.
 
+The above script generated our karyotype file and four different data files. What are they? How are they oriented?
 
+Now, we all that is left is actually running circos. Navigate into the circos-build directory and type ``circos``:
+::
+  cd circos-build
+  circos
+
+This command should generate an ``circos.svg`` and ``circos.png``. Check out the ``circos.png``!
+
+Now, let's take a look at the file that controls this crazy figure-- ``circos.config``.
+
+Try changing a few parameters-- colors, radius, size, to see what you can do. Again, if you are into this type of visualization, do check out the extensive `tutorial  <http://circos.ca/documentation/tutorials/>`__. 
 References
 ===========
 * http://genome.cshlp.org/content/early/2009/06/15/gr.092759.109.abstract
