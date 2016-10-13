@@ -52,6 +52,8 @@ Tutorials:
    assemble
    prokka_tutorial
    salmon_tutorial
+
+   day2-install
    
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
