@@ -51,9 +51,13 @@ Tutorials:
    kmer_trimming
    assemble
    prokka_tutorial
-   salmon_tutorial
 
    day2-install
+   salmon_tutorial
+   mapping
+   slice
+   circos_tutorial
+   workflow
    
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
