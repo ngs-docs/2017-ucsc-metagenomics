@@ -72,7 +72,7 @@ Now, link in the ``*gff`` file output from prokka (which we will use to define t
 
 We also need to grab a set of useful scripts and config files for this plotting exercise:
 ::
-  curl -L -O https://github.com/ngs-docs/2016-metagenomics-sio/blob/master/circos-build.tar.gz?raw=true
+  curl -L -O https://github.com/ngs-docs/2016-metagenomics-sio/raw/master/circos-build.tar.gz
   tar -xvzf circos-build.tar.gz
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/subset_assembly.fa.gz
   gunzip subset_assembly.fa.gz
