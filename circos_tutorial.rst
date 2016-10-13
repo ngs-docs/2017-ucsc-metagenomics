@@ -2,6 +2,8 @@
 Using and Installing Circos
 ======================================
 
+.. https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/circos-build.tar.gz
+
 Circos is a powerful visualization tool that allows for the creation of circular graphics to display complex genomic data (e.g. genome comparisons). On top of the circular ideogram generated can be layered any number of graphical information (heatmaps, scatter plots, etc.).
 
 The goals of this tutorial are to:

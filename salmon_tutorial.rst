@@ -16,6 +16,7 @@ Installing Salmon
 
 Download and extract the latest version of Salmon and add it to your PATH:
 ::
+    cd
     wget https://github.com/COMBINE-lab/salmon/releases/download/v0.7.2/Salmon-0.7.2_linux_x86_64.tar.gz
     tar -xvzf Salmon-0.7.2_linux_x86_64.tar.gz
     cd Salmon-0.7.2_linux_x86_64
@@ -26,16 +27,17 @@ Running Salmon
 
 Go to the data directory and download the prokka annotated sequences, assembled metagenome, and fastq files:
 ::
+  mkdir -p /mnt/data
   cd /mnt/data
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249.abundtrim.subset.pe.fq.gz
-  curl -L -O **** prokka_annotation_assembly.tar.gz ***
+  curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/prokka_annotation_assembly.tar.gz
   tar -xvzf prokka_annotation_assembly.tar.gz
 
 Make a new directory for the quantification of data with Salmon:
 ::
     mkdir /mnt/quant
-    cd quant
+    cd /mnt/quant
 
 
 Grab the nucleotide (``*ffn``) predicted protein regions from Prokka and link them here. Also grab the trimmed sequence data (``*fq``)
