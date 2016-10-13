@@ -86,9 +86,9 @@ The first column contains the transcript names, and the fourth column is what we
 Download the gather-counts.py script:
 ::
   curl -L -O https://raw.githubusercontent.com/ngs-docs/2016-metagenomics-sio/master/gather-counts.py
-and run it:
+and run it::
 
-  python ./gather-counts.py
+  python2 ./gather-counts.py
 
 This will give you a bunch of .counts files, which are processed from the quant.sf files and named for the directory from which they emanate.
 
