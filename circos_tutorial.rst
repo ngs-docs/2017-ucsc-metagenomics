@@ -16,6 +16,10 @@ Note: Beyond this brief crash course , circos is very well-documented and has a 
 Installing Circos
 ==================================================
 
+You'll need to install one additional ubuntu package, libgd::
+
+   sudo apt-get -y install libgd-perl
+
 Within your Amazon Instance make a directory called circos and navigate into it. There, we will download and extract the latest version of circos:
 ::
     cd /mnt
@@ -45,22 +49,6 @@ This will take a while to run. When it is done check that you now have all modul
   circos -modules
 
 If you got all 'ok' then you are good to go!
-
-.. note::
-
-   Many of you might have issues installing the GD module. Here is a work around (from `stackoverflow <http://stackoverflow.com/questions/31521570/perl-gd-module-wont-install>`__) if GD did not happily install through CPAN. ::
-
-     mkdir tmp
-     cd tmp
-     wget http://search.cpan.org/CPAN/authors/id/L/LD/LDS/GD-2.56.tar.gz
-     tar xvzf GD-2.56.tar.gz
-     cd GD-2.56
-     perl -i~ -pE'say "Getopt::Long::Configure(qw( pass_through ));" if /GetOptions/;' Build.PL
-     /usr/bin/perl Build.PL --installdirs site
-     sudo ./Build.PL installdeps
-     ./Build.PL make
-     ./Build.PL test
-     sudo ./Build.PL install
 
 And with that, circos should be up and ready to go. Run the example by navigating to the examples folder within the circos folder.
 ::
