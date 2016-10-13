@@ -61,8 +61,8 @@ Visualizing Gene Coverage and Orientation
 ==========================================
 First, let's make a directory where we will be doing all of our work for plotting:
 ::
-  mkdir /mnt/circos
-  cd circos/
+  mkdir /mnt/circos/plotting
+  cd /mnt/circos/plotting
 
 Now, link in the ``*gff`` file output from prokka (which we will use to define the location of genes in each of our genomes), the genome assembly file ``final.contigs.fa``, and the ``SRR*counts`` files that we generated with salmon:
 ::
@@ -72,15 +72,17 @@ Now, link in the ``*gff`` file output from prokka (which we will use to define t
 
 We also need to grab a set of useful scripts and config files for this plotting exercise:
 ::
-  curl -L -O XXXX circos-build.tar.gz
+  curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/circos-build.tar.gz
   tar -xvzf circos-build.tar.gz
-
+  curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/subset_assembly.fa.gz
+  gunzip subset_assembly.fa.gz
+  mv subset_assembly.fa final.contigs.fa
+  
 We are going to limit the data we are trying to visualize and get longest contigs from our assembly. We can do this using a script from the khmer package:
 ::
   extract-long-sequences.py  final.contigs.fa -l 24000 -o final.contigs.long.fa
 
 Next, we will run a script that processes the data from the the files that we just moved to create circos-acceptable files. This is really the crux of using circos: figuring out how to get your data into the correct format.
-
 ::
   python parse_data_for_circos.py
 
