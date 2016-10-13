@@ -11,7 +11,7 @@ At the comamand line, create a new directory and extract some data::
 We're going to work with half the read data set for speed reasons -- ::
 
    gunzip -c ../mapping/SRR1976948.abundtrim.subset.pe.fq.gz | \
-      head -6000000 | gzip -9c > SRR1976948.half.fq.gz
+      head -6000000 > SRR1976948.half.fq
    
 
 In a Jupyter Notebook (go to 'http://' + machine name + ':8000'), password
@@ -21,11 +21,11 @@ In a Jupyter Notebook (go to 'http://' + machine name + ':8000'), password
 
 and then in another cell::
   
-   !load-into-counting.py -M 4e9 -k 31 SRR1976948.kh SRR1976948.half.fq.gz
+   !load-into-counting.py -M 4e9 -k 31 SRR1976948.kh SRR1976948.half.fq
 
 and in another cell::
    
-   !abundance-dist.py SRR1976948.kh SRR1976948.half.fq.gz SRR1976948.dist
+   !abundance-dist.py SRR1976948.kh SRR1976948.half.fq SRR1976948.dist
 
 and in yet another cell::
 
@@ -39,10 +39,10 @@ and in yet another cell::
 Then::
 
    python2 ~/khmer/sandbox/calc-median-distribution.py SRR1976948.kh \
-      SRR1976948.half.fq.gz SRR1976948.readdist
+      SRR1976948.half.fq SRR1976948.readdist
 
 And::
   
-   python2 ~/khmer/sandbox/slice-reads-by-coverage.py SRR1976948.kh SRR1976948.half.fq.gz slice.fq -m 10 -M 100
+   python2 ~/khmer/sandbox/slice-reads-by-coverage.py SRR1976948.kh SRR1976948.half.fq slice.fq -m 0 -M 60
 
 Note, won't work with MDA.
