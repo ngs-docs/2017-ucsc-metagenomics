@@ -61,7 +61,8 @@ Why would we assemble, vs looking at raw reads?  What are the
 advantages and disadvantages?
 
 What are the technology tradeoffs between Illumina HiSeq, Illumina
-MiSeq, and PacBio?
+MiSeq, and PacBio? (Also see `this paper
+<http://ivory.idyll.org/blog/2015-sharon-paper.html>`__.)
 
 What kind of experimental design considerations should you have if you
 plan to assemble?

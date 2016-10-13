@@ -1,7 +1,7 @@
 Short read quality and trimming
 ===============================
 
-Start up an instance with ami-05384865 and 200 GB of local storage
+Start up an instance with ami-05384865 and 500 GB of local storage
 (:doc:`aws/boot`).  You should also configure your firewall
 (:doc:`aws/configure-firewall`) to pass through TCP ports 8000-8888.
 
