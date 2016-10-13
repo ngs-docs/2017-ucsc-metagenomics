@@ -2,6 +2,10 @@
 Slicing and dicing with k-mers
 ==============================
 
+(Note, this won't work with amplified data.)
+
+---
+
 At the comamand line, create a new directory and extract some data::
 
    cd /mnt
@@ -45,4 +49,23 @@ And::
   
    python2 ~/khmer/sandbox/slice-reads-by-coverage.py SRR1976948.kh SRR1976948.half.fq slice.fq -m 0 -M 60
 
-Note, won't work with MDA.
+Assemble the slice
+------------------
+
+(Re)install megahit::
+
+   cd
+   git clone https://github.com/voutcn/megahit.git
+   cd megahit
+   make
+
+Go back to the slice directory and extract paired ends::
+
+  cd /mnt/slice
+  extract-paired-ends.py slice.fq
+
+Assemble! ::
+  
+   ~/megahit/megahit --12 slice.fq.pe -o slice
+
+The contigs will be in ``slice/final.contigs.fa``.
