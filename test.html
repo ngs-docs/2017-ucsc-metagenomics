@@ -1,0 +1,69 @@
+
+<<include colors_fonts_patterns.conf>>
+
+<<include ideogram.conf>>
+
+<image>
+<<include etc/image.conf>>
+</image>
+
+karyotype   = /mnt/circos/metag.karyotype.txt
+
+
+<plots>
+
+type      = line
+thickness = 2
+
+<plot>
+
+max_gap = 1u
+file    = /mnt/circos/metag.karyotype.txt
+color   = vdgrey
+min     = 0
+max     = 0.015
+r0      = 0.5r
+r1      = 0.8r
+
+fill_color = vdgrey_a3
+
+<backgrounds>
+<background>
+color     = vvlgreen
+y0        = 0.006
+</background>
+<background>
+color     = vvlred
+y1        = 0.002
+</background>
+</backgrounds>
+
+<axes>
+<axis>
+color     = lgrey_a2
+thickness = 1
+spacing   = 0.025r
+</axis>
+</axes>
+
+<rules>
+
+<rule>
+condition    = var(value) > 0.006
+color        = dgreen
+fill_color   = dgreen_a1
+</rule>
+
+<rule>
+condition    = var(value) < 0.002
+color        = dred
+fill_color   = dred_a1
+</rule>
+
+</rules>
+
+</plot>
+
+</plots>
+
+<<include etc/housekeeping.conf>>
