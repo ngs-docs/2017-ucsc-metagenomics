@@ -73,7 +73,7 @@ First, let's make a directory where we will be doing all of our work for plottin
 
 Now, link in the ``*gff`` file output from prokka (which we will use to define the location of genes in each of our genomes), the genome assembly file ``final.contigs.fa``, and the ``SRR*counts`` files that we generated with salmon:
 ::
-  ln -fs /mnt/data/prokka_annotation_assembly/*gff .
+  ln -fs /mnt/data/prokka_annotation/*gff .
   ln -fs /mnt/data/final.contigs.fa .
   ln -fs /mnt/quant/*counts .
 
