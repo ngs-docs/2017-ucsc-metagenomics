@@ -7,3 +7,10 @@ Oceanography.
 
 See https://2016-metagenomics-sio.readthedocs.io/en/latest/ for the
 rendered version of this site.
+
+----
+
+To look into:
+
+* https://github.com/chrisquince/DESMAN for binning
+* https://github.com/DRL/blobtools - blobtools viz
