@@ -11,6 +11,11 @@ The goals of this tutorial are to:
 *  Install salmon
 *  Use salmon to estimate gene coverage in our metagenome dataset
 
+Extra resources:
+
+* see the `finished plotting notebook <https://github.com/ngs-docs/2016-metagenomics-sio/blob/master/files/plot-quant.ipynb>`__.
+* see the `extract-sequences.py <https://github.com/ngs-docs/2016-metagenomics-sio/blob/master/files/extract-sequences.py>`__ script.
+
 Installing Salmon
 ==================================================
 

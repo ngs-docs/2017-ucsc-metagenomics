@@ -4,6 +4,10 @@ Slicing and dicing with k-mers
 
 (Note, this won't work with amplified data.)
 
+Extra resources:
+
+* `plotting notebook <https://github.com/ngs-docs/2016-metagenomics-sio/blob/master/files/coverage.ipynb>`__
+
 ---
 
 At the comamand line, create a new directory and extract some data::
