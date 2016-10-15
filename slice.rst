@@ -10,7 +10,7 @@ Extra resources:
 
 ---
 
-At the comamand line, create a new directory and extract some data::
+At the command line, create a new directory and extract some data::
 
    cd /mnt
    mkdir slice
