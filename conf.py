@@ -41,7 +41,7 @@ source_suffix = ['.rst', '.md']
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'toc'
 
 # General information about the project.
 project = u'2016-metagenomics-sio'
@@ -269,3 +269,4 @@ try:
 except ImportError:
     pass
 
+source_suffix = ['.rst', '.md']

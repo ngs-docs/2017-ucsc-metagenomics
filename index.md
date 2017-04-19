@@ -1,6 +1,6 @@
-2016 / October / Metagenomics
-=============================
+# 2017 Metagenomics workshop at UC Santa Cruz
 
+<!--
 This workshop was given on October 12th and 13th, 2016,
 by Harriet Alexander and C. Titus Brown, at the Scripps Institute of
 Oceanography.
@@ -18,27 +18,12 @@ good, sorry!) You can view it here:
 * `day 2, morning <https://www.youtube.com/watch?v=F-Pj4YAWzcA>`__
 * `day 2, afternoon <https://www.youtube.com/watch?v=uGVHi9EUA1I>`__
 
-Tutorials:
+-->
 
-.. toctree::
-   :maxdepth: 2
-
-   welcome
-   aws/index
-   quality
-   kmer_trimming
-   assemble
-   prokka_tutorial
-
-   day2-install
-   salmon_tutorial
-   mapping
-   slice
-   circos_tutorial
-   workflow
+Foo!
 
 Technical information
 ~~~~~~~~~~~~~~~~~~~~~
 
 The github repository for this workshop is public at
-https://github.com/ngs-docs/2016-metagenomics-sio
+https://github.com/ngs-docs/2017-ucsc-metagenomics

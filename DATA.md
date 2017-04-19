@@ -1,3 +1,5 @@
+# Data
+
 [SRR1976948_1.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_1.fastq.gz) - First 1m reads of the SRA record
 
 [SRR1976948_2.fastq.gz](https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_2.fastq.gz) - First 1m reads of the SRA record
