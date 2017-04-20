@@ -12,7 +12,7 @@ These are erroneous k-mers caused by sequencing errors.
 
 In a new Python3 Jupyter Notebook, run::
 
-  cd /mnt/work
+  cd ~/work
 
 and then ::
   

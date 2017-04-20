@@ -1,40 +1,16 @@
 Short read quality and trimming
 ===============================
 
-Start up an instance with ami-05384865 and 500 GB of local storage
-(:doc:`aws/boot`).  You should also configure your firewall
-(:doc:`aws/configure-firewall`) to pass through TCP ports 8000-8888.
-
-Then, `Log into your computer <aws/login-shell.html>`__.
+(Jetstream startup instructions HERE.)
 
 ---
 
-You should now be logged into your Amazon computer!  You should see
+You should now be logged into your Jetstream computer!  You should see
 something like this::
 
    ubuntu@ip-172-30-1-252:~$
 
 this is the command prompt.
-
-Prepping the computer
----------------------
-
-Before we do anything else, we need to set up a place to work and
-install a few things.
-
-First, let's set up a place to work.  Here, we'll make /mnt writeable::
-
-   sudo chmod a+rwxt /mnt
-
-.. note::
-
-   /mnt is the location we're going to use on Amazon computers, but
-   if you're working on a local cluster, it will have a different
-   location.  Talk to your local sysadmin and ask them where they
-   recommend putting lots of short-term working files, i.e. the
-   "scratch" space.
-
-----
 
 Installing some software
 ------------------------
@@ -54,6 +30,7 @@ Then update your environment and install khmer::
 
   source ~/.bashrc
 
+  pip install -U setuptools pip
   cd
   git clone https://github.com/dib-lab/khmer.git
   cd khmer
@@ -67,7 +44,7 @@ more securely, and also have it run in the background::
 
   jupyter notebook --generate-config
   
-  cat >>/home/ubuntu/.jupyter/jupyter_notebook_config.py <<EOF
+  cat >>~/.jupyter/jupyter_notebook_config.py <<EOF
   c = get_config()
   c.NotebookApp.ip = '*'
   c.NotebookApp.open_browser = False
@@ -78,7 +55,6 @@ more securely, and also have it run in the background::
 
 Now, run! ::
 
-  cd /mnt
   jupyter notebook &
 
 You should be able to visit port 8000 on your AWS computer and see the
@@ -92,20 +68,20 @@ We're going to be using a subset of data from `Hu et al.,
 from the Banfield lab samples some relatively low diversity environments
 and finds a bunch of nearly complete genomes.
 
-(See `DATA.md <https://github.com/ngs-docs/2016-metagenomics-sio/blob/work/DATA.md>`__ for a list of the data sets we're using in this tutorial.)
+(See `DATA.html <DATA.html>`__ for a list of the data sets we're using in this tutorial.)
 
 1. Copying in some data to work with.
 -------------------------------------
 
 We've loaded subsets of the data onto an Amazon location for you, to
 make everything faster for today's work.  We're going to put the
-files on your computer locally under the directory /mnt/data::
+files on your computer locally under the directory ``~/data``::
 
-   mkdir /mnt/data
+   mkdir ~/data
 
 Next, let's grab part of the data set::
 
-   cd /mnt/data
+   cd ~/data
    curl -O -L https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_1.fastq.gz
    curl -O -L https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_2.fastq.gz
    
@@ -136,13 +112,13 @@ We'll talk about what these files are below.
 First, make a working directory; this will be a place where you can futz
 around with a copy of the data without messing up your primary data::
 
-   mkdir /mnt/work
-   cd /mnt/work
+   mkdir ~/work
+   cd ~/work
 
 Now, make a "virtual copy" of the data in your working directory by
 linking it in -- ::
 
-   ln -fs /mnt/data/* .
+   ln -fs ~/data/* .
 
 These are FASTQ files -- let's take a look at them::
 

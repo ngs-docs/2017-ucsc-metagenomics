@@ -22,6 +22,8 @@ Circos and An'vio for viz
 
 Quickly searching and comparing your samples with sourmashx
 
+What next? CAzy, KEGG, etc.
+
 <!-- See [the complete table of contents](toc.html) -->
 
 ## Technical information
