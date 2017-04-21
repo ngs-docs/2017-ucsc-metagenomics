@@ -20,7 +20,7 @@ Binning genomes out of your metagenome
 
 Circos and An'vio for viz
 
-Quickly searching and comparing your samples with sourmashx
+Quickly searching and comparing your samples with sourmash
 
 What next? CAzy, KEGG, etc.
 
