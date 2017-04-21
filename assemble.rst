@@ -7,6 +7,7 @@ good assembler designed for metagenomes.
 First, install it::
 
    cd
+   sudo apt-get install zlib1g-dev
    git clone https://github.com/voutcn/megahit.git
    cd megahit
    make
@@ -73,7 +74,7 @@ an analysis of read search vs contig search of a protein database.
 
 .. thumbnail:: files/assembler-runtimes.png
    :width: 20%
-           
+
 .. thumbnail:: files/assembler-mapping.png
    :width: 20%
 
