@@ -98,4 +98,6 @@ p_query p_genome
 
 If you go to
 [the SRA information](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA278302)
-for this project, you'll see that Petrotog
+for this project, you'll see that Petrotoga and Mesotoga are both in there.
+Of course, in this case we're looking at largely junknown critters (3% at
+most is in genbank!)
