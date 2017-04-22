@@ -23,12 +23,12 @@ Run::
 
 Install anaconda:
 
-curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-bash Anaconda3-4.2.0-Linux-x86_64.sh
+   curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+   bash Anaconda3-4.2.0-Linux-x86_64.sh
 
 Then update your environment ::
 
-source ~/.bashrc
+   source ~/.bashrc
 
 Running Jupyter Notebook
 ------------------------
