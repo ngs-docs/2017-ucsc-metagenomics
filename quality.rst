@@ -57,8 +57,9 @@ Now, run! ::
 
   jupyter notebook &
 
-You should be able to visit port 8000 on your Jetstream computer and see the
-Jupyter console.  (Go to `http://<ip address>:8000`; The password is 'davis'.)
+You should be able to visit port 8000 on your Jetstream computer and
+see the Jupyter console.  (Go to `http://<ip address>:8000` in your
+web browser; the password is 'davis'.)
 
 Data source
 -----------
