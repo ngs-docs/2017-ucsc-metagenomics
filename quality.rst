@@ -87,6 +87,15 @@ Next, let's grab part of the data set::
    curl -O -L https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_1.fastq.gz
    curl -O -L https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948_2.fastq.gz
    
+Let's make sure we downloaded all of our data using md5sum.::
+
+   md5sum SRR1976948_1.fastq.gz SRR1976948_2.fastq.gz
+
+You should see this: ::
+
+   37bc70919a21fccb134ff2fefcda03ce  SRR1976948_1.fastq.gz
+   29919864e4650e633cc409688b9748e2  SRR1976948_2.fastq.gz
+
 Now if you type::
 
    ls -l
