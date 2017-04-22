@@ -1,4 +1,4 @@
-2027 / April / Metagenomics
+2017 / April / Metagenomics
 =============================
 
 This workshop was given on April 22nd and 23th, 2016,
