@@ -7,6 +7,8 @@ TAs: Luiz Irber, Shannon Joslin, Taylor Reiter
 These are the online materials for a metagenomics workshop hosted by
 Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
+Etherpad: https://public.etherpad-mozilla.org/p/UCSC_metagenomics
+
 ## Day 1: Noon to 5pm
 
 [Logging into the cloud (XSEDE Jetstream)](jetstream/boot.html)
