@@ -45,11 +45,12 @@ Make a new directory for the annotation:
 
 Link the metagenome assembly file into this directory:
 ::
+
     ln -fs ~/assembly/combined/final.contigs.fa ./subset_assembly.fa
 
 Now it is time to run Prokka! There are tons of different ways to specialize the running of Prokka. We are going to keep it simple for now, though. It will take a little bit to run.
-
 ::
+
     prokka subset_assembly.fa --outdir prokka_annotation --prefix metagG
 
 This will generate a new folder called ``prokka_annotation`` in which will be a series of files, which are detailed `here <https://github.com/tseemann/prokka/blob/master/README.md#output-files>`__.
