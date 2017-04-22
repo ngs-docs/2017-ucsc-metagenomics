@@ -86,10 +86,10 @@ Now, select 'New' to start up a new machine.
 .. thumbnail:: images/login-8.png
    :width: 20%
 
-Find the "Ubuntu 14.04.03" image, click on it
+Find the "Ubuntu 14.04.3" image, click on it
 =============================================
 
-Enter "Ubuntu 14.04.03" into the search bar - make sure it's from
+Enter "Ubuntu 14.04.3" into the search bar - make sure it's from
 March 22nd, 2017.
 
 .. thumbnail:: images/login-9.png

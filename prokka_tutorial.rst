@@ -20,9 +20,12 @@ Download and extract the latest version of prokka:
 
 We also will need some dependencies such as bioperl:
 ::
-    sudo apt-get install bioperl libdatetime-perl libxml-simple-perl libdigest-md5-perl
-    sudo perl -MCPAN -e shell
-    sudo perl -MCPAN -e 'install "XML::Simple"'
+    sudo apt-get -y install bioperl libdatetime-perl libxml-simple-perl libdigest-md5-perl
+    sudo bash
+    export PERL_MM_USE_DEFAULT=1
+    export PERL_EXTUTILS_AUTOINSTALL="--defaultdeps"
+    perl -MCPAN -e 'install "XML::Simple"'
+    exit
 
 Now, you should be able to add Prokka to your ``$PATH`` and set up the index for the sequence database:
 ::
@@ -36,15 +39,16 @@ Running Prokka
 
 Make a new directory for the annotation:
 ::
-    cd /mnt
+    cd ~/
     mkdir annotation
     cd annotation
 
 Link the metagenome assembly file into this directory:
 ::
-    ln -fs /mnt/assembly/combined/final.contigs.fa
+    ln -fs ~/assembly/combined/final.contigs.fa ./subset_assembly.fa
 
 Now it is time to run Prokka! There are tons of different ways to specialize the running of Prokka. We are going to keep it simple for now, though. It will take a little bit to run.
+
 ::
     prokka subset_assembly.fa --outdir prokka_annotation --prefix metagG
 

@@ -11,11 +11,11 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 [Logging into the cloud (XSEDE Jetstream)](jetstream/boot.html)
 
-[Evaluating your short-read data set quality](quality)
+[Evaluating your short-read data set quality](quality.html)
 
-[Assembling your short read data set with MEGAHIT](assemble)
+[Assembling your short read data set with MEGAHIT](assemble.html)
 
-[Annotating your short-read data set with Prokka](prokka)
+[Annotating your short-read data set with Prokka](prokka.html)
 
 ## Day 2: Morning (9am - noon)
 

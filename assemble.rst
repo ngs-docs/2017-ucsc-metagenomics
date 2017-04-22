@@ -67,20 +67,6 @@ MiSeq, and PacBio? (Also see `this paper
 What kind of experimental design considerations should you have if you
 plan to assemble?
 
-Some figures: the first two come from work by Dr. Sherine Awad on
-analyzing the data from Shakya et al (2014).  The third comes from
-an analysis of read search vs contig search of a protein database.
-
-.. thumbnail:: files/assembler-runtimes.png
-   :width: 20%
-           
-.. thumbnail:: files/assembler-mapping.png
-   :width: 20%
-
-.. thumbnail:: files/read-vs-contig-alignment.png
-   :width: 20%
-
-
 After the assembly is finished
 ------------------------------
 
