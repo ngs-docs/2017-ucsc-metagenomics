@@ -33,7 +33,6 @@ Then update your environment and install khmer::
    pip install -U setuptools pip
    pip install -U Cython
    cd
-   cd khmer
    pip install https://github.com/dib-lab/khmer/archive/master.zip
    
 Running Jupyter Notebook
