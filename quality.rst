@@ -34,8 +34,8 @@ Then update your environment and install khmer::
    cd
    git clone https://github.com/dib-lab/khmer.git
    cd khmer
-   sudo python2 setup.py install
-
+   pip install https://github.com/dib-lab/khmer/archive/master.zip
+   
 Running Jupyter Notebook
 ------------------------
 
