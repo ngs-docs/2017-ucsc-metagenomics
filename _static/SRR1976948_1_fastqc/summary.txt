@@ -2,10 +2,10 @@ PASS	Basic Statistics	SRR1976948_1.fastq.gz
 FAIL	Per base sequence quality	SRR1976948_1.fastq.gz
 PASS	Per sequence quality scores	SRR1976948_1.fastq.gz
 WARN	Per base sequence content	SRR1976948_1.fastq.gz
+PASS	Per base GC content	SRR1976948_1.fastq.gz
 FAIL	Per sequence GC content	SRR1976948_1.fastq.gz
 PASS	Per base N content	SRR1976948_1.fastq.gz
 PASS	Sequence Length Distribution	SRR1976948_1.fastq.gz
 PASS	Sequence Duplication Levels	SRR1976948_1.fastq.gz
 PASS	Overrepresented sequences	SRR1976948_1.fastq.gz
-FAIL	Adapter Content	SRR1976948_1.fastq.gz
 WARN	Kmer Content	SRR1976948_1.fastq.gz
