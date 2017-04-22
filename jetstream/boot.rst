@@ -118,7 +118,8 @@ Click on your new instance to get more information!
 
 Now, you can either click "Open Web Shell", *or*, if you know how to use ssh,
 you can ssh in as user 'tx160085' on the IP address of the machine - see
-circled information below.
+circled information below.  Note that you'll need to use the private key
+file we sent around to everyone in last the pre-workshop e-mail.
 
 .. thumbnail:: images/login-12.png
    :width: 20%

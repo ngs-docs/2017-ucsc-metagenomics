@@ -1,5 +1,13 @@
 # 2017 Metagenomics workshop at UC Santa Cruz
 
+Instructors: Harriet Alexander, Phillip Brooks, and C. Titus Brown
+
+TAs: Luiz Irber, Shannon Joslin, Taylor Reiter
+
+These are the online materials for a metagenomics workshop hosted by
+Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd,
+2017.
+
 ## Day 1: Noon to 5pm
 
 Logging into the cloud (XSEDE Jetstream)

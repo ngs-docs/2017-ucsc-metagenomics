@@ -20,6 +20,7 @@ Tutorials:
    slice
    circos_tutorial
    workflow
+   whatnext
 
    DATA
    INSTALL
