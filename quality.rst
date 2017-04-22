@@ -60,6 +60,8 @@ You should be able to visit port 8000 on your Jetstream computer and
 see the Jupyter console.  (Go to `http://<ip address>:8000` in your
 web browser; the password is 'davis'.)
 
+After, navigate back to your Jetstream web shell and type "Ctrl+C"
+
 Data source
 -----------
 
