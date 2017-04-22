@@ -1,7 +1,7 @@
 Short read quality and trimming
 ===============================
 
-(Jetstream startup instructions HERE.)
+(Jetstream startup instructions `HERE <https://2017-ucsc-metagenomics.readthedocs.io/en/latest/jetstream/boot.html>`__.)
 
 ---
 
