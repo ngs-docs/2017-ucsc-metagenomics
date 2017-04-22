@@ -68,8 +68,20 @@ what do you get if you do this with the other set of reads?
 
 ## Compare many samples
 
+Adjust plotting (this is a bug in sourmash :) --
+```
+echo 'backend : Agg' > matplotlibrc
+```
+
+Do a comparison:
+
 ```
 sourmash compare *.sig -o comparison
+```
+
+and then plot:
+
+```
 sourmash plot --pdf comparison
 ```
 
