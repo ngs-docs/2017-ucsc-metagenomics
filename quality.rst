@@ -145,13 +145,11 @@ Now, run FastQC on two files::
 
 Now type 'ls'::
 
-   ls -d *fastqc*
+   ls -d *fastqc.zip*
 
 to list the files, and you should see:
 ::
-   SRR1976948_1_fastqc.html
    SRR1976948_1_fastqc.zip
-   SRR1976948_2_fastqc.html
    SRR1976948_2_fastqc.zip
 
 You can download these files using your Jupyter Notebook console, if you like;
