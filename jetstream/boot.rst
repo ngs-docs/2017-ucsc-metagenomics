@@ -95,11 +95,11 @@ March 22nd, 2017.
 .. thumbnail:: images/login-9.png
    :width: 20%
            
-Name it something simple and select 'm1.small'
+Name it something simple and select 'm1.medium'
 ==============================================
 
 Change the name after what we're doing - "UCSC workshop", for example,
-but it doesn't matter -- and select 'm1.small'.
+but it doesn't matter -- and select 'm1.medium'.
 
 .. thumbnail:: images/login-10.png
    :width: 20%
