@@ -107,7 +107,7 @@ Finally, run the MaxBin! Note: MaxBin can take a lot of time to run and bin your
 
 First, we will get a list of the count files that we have to pass to MaxBin::
 
-  cd mapping
+  cd ~/mapping
   mkdir binning
   cd binning
   ls ../*counts > abundance.list
