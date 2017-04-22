@@ -123,4 +123,7 @@ file we sent around to everyone in last the pre-workshop e-mail.
 
 .. thumbnail:: images/login-12.png
    :width: 20%
+
+----
            
+Next: :doc:`../quality`

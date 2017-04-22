@@ -53,3 +53,7 @@ Basic rules:
 
 Place the sticky notes where we can see them from the back of the room --
 e.g. on the back of your laptop.
+
+----
+
+Next: :doc:`jetstream/boot`
