@@ -51,7 +51,7 @@ Make a new directory for the quantification of data with Salmon:
 Grab the nucleotide (``*ffn``) predicted protein regions from Prokka and link them here. Also grab the trimmed sequence data (``*fq``)
 ::
    
-    ln -fs ~/prokka_annotation/*ffn .
+    ln -fs ~/data/prokka_annotation/*ffn .
     ln -fs ~/data/*.abundtrim.subset.pe.fq.gz .
 
 Create the salmon index:
