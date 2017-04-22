@@ -66,6 +66,13 @@ sourmash search -k 21 final.contigs.fa.sig \
 
 what do you get if you do this with the other set of reads?
 
+## Compare many samples
+
+```
+sourmash compare *.sig -o comparison
+sourmash plot --pdf comparison
+```
+
 ## What's in my metagenome?
 
 Download and unpack the k=21 RefSeq index described in
@@ -98,6 +105,7 @@ p_query p_genome
 
 If you go to
 [the SRA information](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA278302)
-for this project, you'll see that Petrotoga and Mesotoga are both in there.
-Of course, in this case we're looking at largely junknown critters (3% at
-most is in genbank!)
+for this project, you'll see that Petrotoga and Mesotoga are both in there
+- yay!  Of course, in this case we're looking at largely unknown
+critters (3% at most is in genbank!) so we wouldn't expect many
+matches.

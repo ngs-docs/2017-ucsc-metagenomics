@@ -22,8 +22,8 @@ Downloading data
 
 Now, go to a new directory and grab the data::
 
-  mkdir /mnt/mapping
-  cd /mnt/mapping
+  mkdir ~/mapping
+  cd ~/mapping
   
   curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz
   curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249.abundtrim.subset.pe.fq.gz

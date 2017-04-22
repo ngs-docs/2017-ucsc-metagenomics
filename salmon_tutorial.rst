@@ -34,8 +34,8 @@ Running Salmon
 Go to the data directory and download the prokka annotated sequences, assembled metagenome, and fastq files:
 ::
    
-  mkdir -p /mnt/data
-  cd /mnt/data
+  mkdir -p data
+  cd data
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249.abundtrim.subset.pe.fq.gz
   curl -L -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/prokka_annotation_assembly.tar.gz
@@ -44,15 +44,15 @@ Go to the data directory and download the prokka annotated sequences, assembled 
 Make a new directory for the quantification of data with Salmon:
 ::
    
-    mkdir /mnt/quant
-    cd /mnt/quant
+    mkdir quant
+    cd quant
 
 
 Grab the nucleotide (``*ffn``) predicted protein regions from Prokka and link them here. Also grab the trimmed sequence data (``*fq``)
 ::
    
-    ln -fs /mnt/data/prokka_annotation/*ffn .
-    ln -fs /mnt/data/*.abundtrim.subset.pe.fq.gz .
+    ln -fs ~/prokka_annotation/*ffn .
+    ln -fs ~/data/*.abundtrim.subset.pe.fq.gz .
 
 Create the salmon index:
 ::
@@ -120,7 +120,7 @@ In Jupyter Notebook, open a new Python3 notebook and enter::
 
 In another cell::
 
-  cd /mnt/quant
+  cd quant
 
 In another cell::
 
