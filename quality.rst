@@ -26,15 +26,15 @@ Install anaconda::
   curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
   bash Anaconda3-4.2.0-Linux-x86_64.sh
 
+(answer 'yes' or select default to all the questions.)
+
 Then update your environment and install khmer::
 
   source ~/.bashrc
 
-  pip install -U setuptools pip
-  cd
-  git clone https://github.com/dib-lab/khmer.git
-  cd khmer
-  sudo python2 setup.py install
+  pip install -U setuptools
+  pip install -U pip
+  pip install https://github.com/dib-lab/khmer/archive/master.zip
 
 Running Jupyter Notebook
 ------------------------
@@ -57,8 +57,8 @@ Now, run! ::
 
   jupyter notebook &
 
-You should be able to visit port 8000 on your AWS computer and see the
-Jupyter console.  (The password is 'davis'.)
+You should be able to visit port 8000 on your Jetstream computer and see the
+Jupyter console.  (Go to `http://<ip address>:8000`; The password is 'davis'.)
 
 Data source
 -----------
@@ -174,6 +174,11 @@ Links:
 
 * `FastQC <http://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`__
 * `FastQC tutorial video <http://www.youtube.com/watch?v=bz93ReOv87Y>`__
+
+There are several caveats about FastQC - the main one is that it only
+calculates certain statistics (like duplicated sequences) for subsets
+of the data (e.g. duplicate sequences are only analyzed for the first
+
 
 3. Trimmomatic
 --------------
