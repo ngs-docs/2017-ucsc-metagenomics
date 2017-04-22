@@ -29,10 +29,10 @@ Install anaconda::
 Then update your environment and install khmer::
 
    source ~/.bashrc
+   
    pip install -U setuptools pip
    pip install -U Cython
    cd
-   git clone https://github.com/dib-lab/khmer.git
    cd khmer
    pip install https://github.com/dib-lab/khmer/archive/master.zip
    
