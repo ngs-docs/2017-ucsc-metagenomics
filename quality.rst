@@ -26,9 +26,15 @@ Install anaconda::
    curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
    bash Anaconda3-4.2.0-Linux-x86_64.sh
 
-Then update your environment ::
+Then update your environment and install khmer::
 
    source ~/.bashrc
+   pip install -U setuptools pip
+   pip install -U Cython
+   cd
+   git clone https://github.com/dib-lab/khmer.git
+   cd khmer
+   sudo python2 setup.py install
 
 Running Jupyter Notebook
 ------------------------
