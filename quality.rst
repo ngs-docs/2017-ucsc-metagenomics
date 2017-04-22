@@ -21,7 +21,7 @@ Run::
   sudo apt-get -y install trimmomatic fastqc python-pip \
      samtools zlib1g-dev ncurses-dev python-dev
 
-Install anaconda:
+Install anaconda::
 
    curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
    bash Anaconda3-4.2.0-Linux-x86_64.sh
@@ -145,13 +145,11 @@ Now, run FastQC on two files::
 
 Now type 'ls'::
 
-   ls -d *fastqc*
+   ls -d *fastqc.zip*
 
 to list the files, and you should see:
 ::
-   SRR1976948_1_fastqc.html
    SRR1976948_1_fastqc.zip
-   SRR1976948_2_fastqc.html
    SRR1976948_2_fastqc.zip
 
 You can download these files using your Jupyter Notebook console, if you like;
