@@ -38,7 +38,7 @@ Then update your environment and install khmer::
 Running Jupyter Notebook
 ------------------------
 
-Let's also run a Jupyter Notebook in /mnt. First, configure it a teensy bit
+Let's also run a Jupyter Notebook. First, configure it a teensy bit
 more securely, and also have it run in the background::
 
   jupyter notebook --generate-config
