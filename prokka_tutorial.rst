@@ -21,6 +21,10 @@ Download and extract the latest version of prokka:
 We also will need some dependencies such as bioperl:
 ::
     sudo apt-get -y install bioperl libdatetime-perl libxml-simple-perl libdigest-md5-perl
+
+and we need an XML package from perl
+::
+
     sudo bash
     export PERL_MM_USE_DEFAULT=1
     export PERL_EXTUTILS_AUTOINSTALL="--defaultdeps"
