@@ -21,16 +21,7 @@ Run::
   sudo apt-get -y install trimmomatic fastqc python-pip \
      samtools zlib1g-dev ncurses-dev python-dev
 
-Install anaconda::
-
-  curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-  bash Anaconda3-4.2.0-Linux-x86_64.sh
-
-(answer 'yes' or select default to all the questions.)
-
 Then update your environment and install khmer::
-
-  source ~/.bashrc
 
   pip install -U setuptools
   pip install -U pip
