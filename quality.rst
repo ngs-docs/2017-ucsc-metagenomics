@@ -101,7 +101,7 @@ These are 1m read subsets of the original data, taken from the beginning
 of the file.
 
 One problem with these files is that they are writeable - by default, UNIX
-makes things writeable by the file owner.  Let's fix that before we go
+makes things writeable by the file owner.  This poses an issue with creating typos or errors in raw data.  Let's fix that before we go
 on any further::
 
    chmod u-w *
