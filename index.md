@@ -10,13 +10,13 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd,
 
 ## Day 1: Noon to 5pm
 
-Logging into the cloud (XSEDE Jetstream)
+[Logging into the cloud (XSEDE Jetstream)](jetstream/boot.html)
 
-Evaluating your short-read data set
+[Evaluating your short-read data set quality](quality)
 
-Assembling your short read data set with MEGAHIT
+[Assembling your short read data set with MEGAHIT](assemble)
 
-Annotating your short-read data set with Prokka
+[Annotating your short-read data set with Prokka](prokka)
 
 ## Day 2: Morning (9am - noon)
 

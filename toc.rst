@@ -8,9 +8,8 @@ Tutorials:
 
    index
    welcome
-   aws/index
+   jetstream/boot
    quality
-   kmer_trimming
    assemble
    prokka_tutorial
 
@@ -25,5 +24,5 @@ Tutorials:
    DATA
    INSTALL
    README
-   
 
+   kmer_trimming
