@@ -103,7 +103,21 @@ First, install MaxBin::
 Binning the assembly
 --------------------
 
-Finally, run the MaxBin! Note: MaxBin can take a lot of time to run and bin your metagenome. As this is a workshop, we are doing three things that sacrifice *quality* for *speed*. 1) We are only using 2 of the 6 datasets that were generated for the this project. Most binning software, including MaxBin, rely upon many samples to accurately bin data. And, we have subsampled the data to make it faster to proess. 2) We did quick and dirty contig estimation using samtools. If you use MaxBin, I would recommend allowing them to generate the abudance tables using Bowtie2. But, again, this will add to the run time. 3) We are limiting the number of iterations that are performed through their expectation-maximization algorithm (5 iterations instead of 50+). This will likely limit the quality of the bins we get out. So, users beware and read the user's manual `here<https://downloads.jbei.org/data/microbial_communities/MaxBin/README.txt>`__ before proceeding with your own data analysis.
+Finally, run the MaxBin! Note: MaxBin can take a lot of time to run and bin your metagenome. As this is a workshop, we are doing three things that sacrifice *quality* for *speed*.
+
+1. We are only using 2 of the 6 datasets that were generated for the
+   this project. Most binning software, including MaxBin, rely upon
+   many samples to accurately bin data. And, we have subsampled the
+   data to make it faster to proess.
+
+2. We did quick and dirty contig estimation using samtools. If you use MaxBin, I would recommend allowing them to generate the abudance tables using Bowtie2. But, again, this will add to the run time.
+
+3. We are limiting the number of iterations that are performed through
+   their expectation-maximization algorithm (5 iterations instead of
+   50+). This will likely limit the quality of the bins we get
+   out. So, users beware and read `the user's manual
+   <https://downloads.jbei.org/data/microbial_communities/MaxBin/README.txt>`__
+   before proceeding with your own data analysis.
 
 First, we will get a list of the count files that we have to pass to MaxBin::
 

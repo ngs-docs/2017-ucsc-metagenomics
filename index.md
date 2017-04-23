@@ -29,7 +29,7 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 ## Day 2: Afternoon (1:15pm - 5pm)
 
-[Annotating your short-read data set with Prokka](prokka.html)
+[Annotating your short-read data set with Prokka](prokka_tutorial.html)
 
 [Quantifying abundance across samples with Salmon](salmon_tutorial.html)
 
