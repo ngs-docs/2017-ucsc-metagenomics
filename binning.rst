@@ -122,9 +122,10 @@ Take a look at the mbin.summary file. What is shown?
 
 Now, we are going to generate a concatenated file that contains all of our genome bins put together. We will change the fasta header name to include the bin number so that we can tell them apart later. ::
 
-  for num in {001..007};
-    do
-      sed -e "/^>/ s/$/ ${num}/" mbin2.$num.fasta >> binned.concat.fasta
+  for file in *fasta
+    do 
+      num=${file//[!0-9]/}
+      sed -e "/^>/ s/$/ ${num}/" mbin.$num.fasta >> binned.concat.fasta
     done
     
 And finally make an annotation file for visualization::
@@ -143,4 +144,8 @@ First, install VizBin::
   sudo apt-get install libatlas3-base libopenblas-base
   curl -L https://github.com/claczny/VizBin/blob/master/VizBin-dist.jar?raw=true > VizBin-dist.jar
 
-VizBin can run in OSX or Linux but is very hard to install on Windows. To simplify things we are going to run VizBin in the desktop emulator through JetStream (which is ... a bit clunky). So, go back to the Jetstream and follow me! 
+VizBin can run in OSX or Linux but is very hard to install on Windows. To simplify things we are going to run VizBin in the desktop emulator through JetStream (which is ... a bit clunky). So, go back to the Jetstream and open up the web desktop simulator. 
+
+.. thumbnail:: ../files/OpenDesktop.png
+   :width: 20%
+
