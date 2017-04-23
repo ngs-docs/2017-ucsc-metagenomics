@@ -54,7 +54,7 @@ Make a new directory for the annotation:
 Link the metagenome assembly file into this directory:
 ::
 
-    ln -fs ~/assembly/combined/final.contigs.fa ./subset_assembly.fa
+    ln -fs ~/mapping/subset_assembly.fa .
 
 Now it is time to run Prokka! There are tons of different ways to specialize the running of Prokka. We are going to keep it simple for now, though. It will take a little bit to run.
 ::
