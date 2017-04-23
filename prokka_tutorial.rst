@@ -39,7 +39,7 @@ Now, you should be able to add Prokka to your ``$PATH`` and set up the index for
     export PATH=$PATH:$HOME/prokka-1.11/bin
     prokka --setupdb
 
-Prokka should be good to go now-- you can check to make sure that all is well by typing ``prokka``. This should print the help screen with all available options.
+Prokka should be good to go now-- you can check to make sure that all is well by typing ``prokka``. This should print the help screen with all available options. You can find out more about Prokka databases `here <https://github.com/tseemann/prokka#Databases>`__
 
 Running Prokka
 ==============

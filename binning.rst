@@ -149,7 +149,7 @@ Now, on to the actual binning::
 
   run_MaxBin.pl -contig ../subset_assembly.fa -abund_list abundance.list -max_iteration 5 -out mbin
 
-This will generate a series of file. Take a look at the files generated. In particular you should see a series of *.fasta files preceeded by numbers. These are the different genome bins predicted by MaxBin.
+This will generate a series of files. Take a look at the files generated. In particular you should see a series of *.fasta files preceeded by numbers. These are the different genome bins predicted by MaxBin.
 
 Take a look at the mbin.summary file. What is shown?
 
