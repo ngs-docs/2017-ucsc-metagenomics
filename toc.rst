@@ -13,7 +13,7 @@ Tutorials:
    assemble
    prokka_tutorial
 
-   day2-install
+   binning
    salmon_tutorial
    mapping
    slice
@@ -25,4 +25,5 @@ Tutorials:
    INSTALL
    README
 
+   day2-install
    kmer_trimming

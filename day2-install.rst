@@ -4,11 +4,7 @@ Day 2 - installation instructions
 
 (Instructions mostly copied from :doc:`quality`!)
 
-Use ami-05384865, with a 500 GB local disk (see: :doc:`aws/boot`)
-
-Make ``/mnt/`` read/write::
-
-  sudo chmod a+rwxt /mnt
+Use image "Ubuntu 14.04.3"
 
 Run::
 
@@ -18,23 +14,27 @@ Run::
 
 Install anaconda::
 
-  curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-  bash Anaconda3-4.2.0-Linux-x86_64.sh
+   curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+   bash Anaconda3-4.2.0-Linux-x86_64.sh
 
-Then update your environment and install khmer::
+Then update your environment and install [khmer](http://khmer.readthedocs.io)
+and [sourmash](http://sourmash.readthedocs.io/en/latest/)::
 
-  source ~/.bashrc
+   source ~/.bashrc
+   
+   pip install -U pip
+   pip install -U setuptools
+   pip install -U Cython
+   pip install https://github.com/dib-lab/khmer/archive/master.zip
+   pip install https://github.com/dib-lab/sourmash/archive/2017-ucsc-metagenome.zip
 
-  cd
-  git clone https://github.com/dib-lab/khmer.git
-  cd khmer
-  sudo python2 setup.py install
+(See [the sourmash docs for this workshop](sourmash.html) for some details on the sourmash install.)
 
 Running Jupyter Notebook
 ------------------------
 
-Let's also run a Jupyter Notebook in /mnt. First, configure it a teensy bit
-more securely, and also have it run in the background.
+Let's also run a Jupyter Notebook in your home directory.  Configure
+it a teensy bit more securely, and also have it run in the background.
 
 Generate a config::
 
@@ -54,8 +54,9 @@ by default::
 
 Now, run! ::
 
-  cd /mnt
   jupyter notebook &
 
-You should be able to visit port 8000 on your AWS computer and see the
-Jupyter console.
+You should be able to visit port 8000 on your computer and see the
+Jupyter console; to get the URL to Jupyter, run::
+
+  echo http://$(hostname):8000/

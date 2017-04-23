@@ -20,6 +20,8 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 ## Day 2: Morning (9am - noon)
 
+[Software install for day 2](day2-install.html)
+
 [Binning genomes out of your metagenome](binning.html)
 
 [Quickly searching and comparing your samples with sourmash](sourmash.html)

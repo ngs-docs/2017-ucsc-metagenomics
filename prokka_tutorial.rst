@@ -14,12 +14,14 @@ Installing Prokka
 
 Download and extract the latest version of prokka:
 ::
+   
     cd ~/
     wget http://www.vicbioinformatics.com/prokka-1.11.tar.gz
     tar -xvzf prokka-1.11.tar.gz
 
 We also will need some dependencies such as bioperl:
 ::
+   
     sudo apt-get -y install bioperl libdatetime-perl libxml-simple-perl libdigest-md5-perl
 
 and we need an XML package from perl
@@ -33,6 +35,7 @@ and we need an XML package from perl
 
 Now, you should be able to add Prokka to your ``$PATH`` and set up the index for the sequence database:
 ::
+   
     export PATH=$PATH:$HOME/prokka-1.11/bin
     prokka --setupdb
 
@@ -43,6 +46,7 @@ Running Prokka
 
 Make a new directory for the annotation:
 ::
+   
     cd ~/
     mkdir annotation
     cd annotation
