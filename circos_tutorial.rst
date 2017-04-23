@@ -8,7 +8,7 @@ Circos is a powerful visualization tool that allows for the creation of circular
 
 The goals of this tutorial are to:
 
-*  Install circos on your Ubuntu AWS system
+*  Install circos on your Ubuntu system
 *  Use Circos to visualize our metagenomic data
 
 Note: Beyond this brief crash course , circos is very well-documented and has a great series of `tutorials  <http://circos.ca/documentation/tutorials/>`__ and `course <http://circos.ca/documentation/course/>`__ materials that are useful.
@@ -20,9 +20,9 @@ You'll need to install one additional ubuntu package, libgd::
 
    sudo apt-get -y install libgd-perl
 
-Within your Amazon Instance make a directory called circos and navigate into it. There, we will download and extract the latest version of circos:
+Make a directory called circos and navigate into it. There, we will download and extract the latest version of circos:
 ::
-    cd /mnt
+    cd 
     mkdir circos
     cd circos
     curl -O http://dib-training.ucdavis.edu.s3.amazonaws.com/metagenomics-scripps-2016-10-12/circos-0.69-3.tar.gz
@@ -30,7 +30,7 @@ Within your Amazon Instance make a directory called circos and navigate into it.
 
 Circos runs within Perl and as such does not need to be compiled to run. So, we can just add the location of circos to our path variable. (Alternatively, you can append this statement to the end of your ``.bashrc`` file.)
 ::
-    export PATH=/mnt/circos/circos-0.69-3/bin:$PATH
+    export PATH=~/circos/circos-0.69-3/bin:$PATH
 
 Circos does, however, require quite a few additional perl modules to operate correctly. To see what modules are missing and need to be downloaded type the following:
 ::
@@ -52,7 +52,7 @@ If you got all 'ok' then you are good to go!
 
 And with that, circos should be up and ready to go. Run the example by navigating to the examples folder within the circos folder.
 ::
-  cd /mnt/circos/circos-0.69-3/example
+  cd ~/circos/circos-0.69-3/example
   bash run
 
 This will take a little bit to run but should generate a file called ``circos.png``.  Open it and you can get an idea of the huge variety of things that are possible with circos and a lot of patience. We will not be attempting anything that complex today, however.
@@ -61,14 +61,14 @@ Visualizing Gene Coverage and Orientation
 ==========================================
 First, let's make a directory where we will be doing all of our work for plotting:
 ::
-  mkdir /mnt/circos/plotting
-  cd /mnt/circos/plotting
+  mkdir ~/circos/plotting
+  cd ~/circos/plotting
 
 Now, link in the ``*gff`` file output from prokka (which we will use to define the location of genes in each of our genomes), the genome assembly file ``final.contigs.fa``, and the ``SRR*counts`` files that we generated with salmon:
 ::
-  ln -fs /mnt/data/prokka_annotation/*gff .
-  ln -fs /mnt/data/final.contigs.fa .
-  ln -fs /mnt/quant/*counts .
+  ln -fs ~/data/prokka_annotation/*gff .
+  ln -fs ~/data/final.contigs.fa .
+  ln -fs ~/quant/*counts .
 
 We also need to grab a set of useful scripts and config files for this plotting exercise:
 ::
@@ -80,11 +80,14 @@ We also need to grab a set of useful scripts and config files for this plotting 
   
 We are going to limit the data we are trying to visualize and get longest contigs from our assembly. We can do this using a script from the khmer package:
 ::
+  
   extract-long-sequences.py  final.contigs.fa -l 24000 -o final.contigs.long.fa
+  cp ~/data/quant/*counts . 
 
 Next, we will run a script that processes the data from the the files that we just moved to create circos-acceptable files. This is really the crux of using circos: figuring out how to get your data into the correct format.
 ::
-   python parse_data_for_circos.py
+  
+  python parse_data_for_circos.py
 
 If you are interested-- take a look at the script and the input files to see how these data were manipulated.
 
