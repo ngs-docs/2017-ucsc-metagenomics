@@ -121,7 +121,7 @@ In Jupyter Notebook, open a new Python3 notebook and enter::
 
 In another cell::
 
-  cd quant
+  cd ~/data/quant
 
 In another cell::
 
