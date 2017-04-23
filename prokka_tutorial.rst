@@ -65,6 +65,14 @@ This will generate a new folder called ``prokka_annotation`` in which will be a 
 
 In particular, we will be using the ``*.ffn`` file to assess the relative read coverage within our metagenomes across the predicted genomic regions.
 
+Questions? 
+=========
+
+* What can I annotate with prokka? 
+* How do I submit my annotated files to Genbank? EBI? 
+* Why is it called Prokka?
+
+
 References
 ===========
 
