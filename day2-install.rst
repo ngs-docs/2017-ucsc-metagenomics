@@ -17,18 +17,17 @@ Install anaconda::
    curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
    bash Anaconda3-4.2.0-Linux-x86_64.sh
 
-Then update your environment and install [khmer](http://khmer.readthedocs.io)
-and [sourmash](http://sourmash.readthedocs.io/en/latest/)::
+Then update your environment and install `khmer <http://khmer.readthedocs.io>`__
+and `sourmash <http://sourmash.readthedocs.io/en/latest/>`__::
 
    source ~/.bashrc
    
-   pip install -U pip
-   pip install -U setuptools
-   pip install -U Cython
+   conda install -n root pip -y
    pip install https://github.com/dib-lab/khmer/archive/master.zip
    pip install https://github.com/dib-lab/sourmash/archive/2017-ucsc-metagenome.zip
 
-(See [the sourmash docs for this workshop](sourmash.html) for some details on the sourmash install.)
+(See `the sourmash docs for this workshop <sourmash.html>`__ for some
+details on the sourmash install.)
 
 Running Jupyter Notebook
 ------------------------
