@@ -18,6 +18,7 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 [Assembling your short read data set with MEGAHIT](assemble.html)
 
 
+
 ## Day 2: Morning (9am - noon)
 
 [Software install for day 2](day2-install.html)
@@ -36,6 +37,16 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 [A brief discussion of workflows & repeatability](workflows.html)
 
 [What next?](whatnext.html)
+
+Resources:
+
+[SEQ Answers](http://seqanswers.com/)
+
+[Biostars](https://www.biostars.org/)
+
+[Data Carpentry](http://www.datacarpentry.org/)
+
+[DIB Summer Institute](http://ivory.idyll.org/dibsi/)
 
 ## Undone
 
