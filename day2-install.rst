@@ -59,3 +59,11 @@ You should be able to visit port 8000 on your computer and see the
 Jupyter console; to get the URL to Jupyter, run::
 
   echo http://$(hostname):8000/
+
+.. note::
+
+   If your network blocks port 8000 (e.g. cruznet at UCSC), you can run::
+
+       ssh -N -f -L localhost:8000:localhost:8000 username@remotehost
+
+   to tunnel the remote Jupyter notebook server over SSH.
