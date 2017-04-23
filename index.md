@@ -33,7 +33,7 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 [Quantifying abundance across samples with Salmon](salmon_tutorial.html)
 
-[Circos and An'vio for viz](circos.html)
+[Circos for viz](circos_tutorial.html)
 
 What next? CAzy, KEGG, etc.
 
