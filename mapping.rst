@@ -24,9 +24,16 @@ Now, go to a new directory and grab the data::
 
   mkdir ~/mapping
   cd ~/mapping
-  
+
   curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz
   curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249.abundtrim.subset.pe.fq.gz
+
+And extract the files::
+
+  for file in *fq.gz:
+    do
+    gunzip $file
+  done
 
 We will also need the assembly; rather than rebuilding it, you can download
 a copy that we saved for you::
@@ -34,43 +41,21 @@ a copy that we saved for you::
   curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/subset_assembly.fa.gz
   gunzip subset_assembly.fa
 
-Next, you'll need to index the assembly::
-
-  bwa index subset_assembly.fa
-
-Splitting the reads
--------------------
-
-The reads are in paired-end/interleaved format, so you'll need to split them -::
-
-   for i in *.pe.fq.gz
-   do
-      gunzip -c $i | head -800000 | split-paired-reads.py -1 $i.1 -2 $i.2 -
-   done
-
-This will take the interleaved reads and produce .1 and .2 files from them.
-   
 Mapping the reads
 -----------------
 
-Map the left reads::
+First, we will need to to index the megahit assembly::
 
-   for i in *.1
-   do
-      bwa aln subset_assembly.fa $i > $(echo $i | cut -d. -f1)_1.sai
-   done
+  bwa index subset_assembly.fa
 
-Map the right reads::
+to The reads are in paired-end/interleaved format, so you'll need to add the -p flag to indicate to bwa that these are paired end data::
 
-   for i in *.2
-   do
-      bwa aln subset_assembly.fa $i > $(echo $i | cut -d. -f1)_2.sai
-   done
+Map the reads::
 
-Combine the paired ends with bwa sampe::
-
-   bwa sampe subset_assembly.fa SRR1976948_1.sai SRR1976948_2.sai SRR1976948.*.1 SRR1976948.*.2 > SRR1976948.sam
-   bwa sampe subset_assembly.fa SRR1977249_1.sai SRR1977249_2.sai SRR1977249.*.1 SRR1977249.*.2 > SRR1977249.sam
+  for i in *fq
+    do
+    bwa mem -p subset_assembly.fa $i > ${i}.aln.sam
+  done
 
 Converting to BAM to visualize
 ------------------------------
@@ -87,8 +72,6 @@ Then, convert both SAM files to BAM files::
      samtools sort $i.bam $i.bam.sorted
      samtools index $i.bam.sorted.bam
   done
-
-
 
 Visualizing the read mapping
 ----------------------------
@@ -127,7 +110,7 @@ Now align this untrimmed data::
    gunzip -c SRR1976948_2.fastq.gz | head -800000 > SRR1976948.2
 
    bwa aln subset_assembly.fa SRR1976948.1 > SRR1976948_1.untrimmed.sai
-   bwa aln subset_assembly.fa SRR1976948.2 > SRR1976948_2.untrimmed.sai   
+   bwa aln subset_assembly.fa SRR1976948.2 > SRR1976948_2.untrimmed.sai
 
    bwa sampe subset_assembly.fa SRR1976948_1.untrimmed.sai SRR1976948_2.untrimmed.sai SRR1976948.1 SRR1976948.2 > SRR1976948.untrimmed.sam
 
