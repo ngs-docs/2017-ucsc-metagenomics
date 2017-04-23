@@ -45,6 +45,25 @@ We will also need the assembly; rather than rebuilding it, you can download a co
   curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/subset_assembly.fa.gz
   gunzip subset_assembly.fa.gz
 
+Optional: look at tetramer clustering
+-------------------------------------
+
+The mapping is going to take a while, so while it's running we can look at
+the tetramer nucleotide frequencies of all of our assembled contigs.  For
+that, we'll need `this notebook <https://github.com/ngs-docs/2017-ucsc-metagenomics/blob/master/files/sourmash_tetramer.ipynb>`__::
+
+  
+  cd ~/
+  curl -O https://raw.githubusercontent.com/ngs-docs/2017-ucsc-metagenomics/pip35/files/sourmash_tetramer.ipynb
+  cd -
+
+and during the mapping we'll load this notebook in the Jupyter notebook
+console.  Note, the address of that will be::
+
+  echo http://$(hostname):8000/
+
+...back to mapping!
+
 Mapping the reads
 -----------------
 
