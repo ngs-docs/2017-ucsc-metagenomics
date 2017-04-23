@@ -33,9 +33,9 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 [Quantifying abundance across samples with Salmon](salmon_tutorial.html)
 
-[A brief discussion of workflows & repeatability](workflows.md)
+[A brief discussion of workflows & repeatability](workflows.html)
 
-[What next?](whatnext.md)
+[What next?](whatnext.html)
 
 ## Undone
 
