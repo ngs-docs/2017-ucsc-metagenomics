@@ -31,10 +31,15 @@ cd ~/sourmash
 sourmash compute --scaled 10000 ~/mapping/SRR*.pe.fq -k 21,31
 ```
 
-Now, compare the two files:
+Now, compare the two files at k=21:
 
 ```
-sourmash compare *.sig -k 21
+sourmash compare SRR*.sig -k 21
+```
+
+or k=31:
+```
+sourmash compare SRR*.sig -k 31
 ```
 
 ## Compare reads to assemblies
@@ -82,7 +87,7 @@ echo 'backend : Agg' > matplotlibrc
 Do a comparison:
 
 ```
-sourmash compare *.sig -o comparison
+sourmash compare SRR*.sig subset*.sig -o comparison
 ```
 
 and then plot:
@@ -90,6 +95,9 @@ and then plot:
 ```
 sourmash plot --pdf comparison
 ```
+
+which will produce a file `comparison.matrix.pdf` and `comparison.dendro.pdf`
+that you can grab view your Jupyter Notebook console.
 
 ## What's in my metagenome?
 
@@ -123,7 +131,7 @@ p_query p_genome
 
 If you go to
 [the SRA information](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA278302)
-for this project, you'll see that Petrotoga and Mesotoga are both in there
-- yay!  Of course, in this case we're looking at largely unknown
+for this project, you'll see that Petrotoga and Mesotoga are both in
+there - yay!  Of course, in this case we're looking at largely unknown
 critters (3% at most is in genbank!) so we wouldn't expect many
 matches.
