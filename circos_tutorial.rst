@@ -8,7 +8,7 @@ Circos is a powerful visualization tool that allows for the creation of circular
 
 The goals of this tutorial are to:
 
-*  Install circos on your Ubuntu AWS system
+*  Install circos on your Ubuntu system
 *  Use Circos to visualize our metagenomic data
 
 Note: Beyond this brief crash course , circos is very well-documented and has a great series of `tutorials  <http://circos.ca/documentation/tutorials/>`__ and `course <http://circos.ca/documentation/course/>`__ materials that are useful.
