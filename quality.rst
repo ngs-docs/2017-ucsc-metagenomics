@@ -56,11 +56,19 @@ Now, run! ::
 
   jupyter notebook &
 
-You should be able to visit port 8000 on your Jetstream computer and
-see the Jupyter console.  (Go to `http://<ip address>:8000` in your
-web browser; the password is 'davis'.)
+On Jetstream, you can get the Web page address by executing:
 
-After, navigate back to your Jetstream web shell and type "Ctrl+C"
+  echo http://$(hostname):8000/
+
+Note, the password is 'davis'.
+
+.. note::
+
+   If your network blocks port 8000 (e.g. cruznet at UCSC), you can run::
+
+       ssh -N -f -L localhost:8000:localhost:8000 username@remotehost
+
+   to tunnel the remote Jupyter notebook server over SSH.
 
 Data source
 -----------
