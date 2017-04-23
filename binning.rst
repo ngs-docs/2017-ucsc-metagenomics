@@ -191,7 +191,7 @@ This should prompt VizBin to open in another window. Click the choose button to 
 .. thumbnail:: ./files/VizBin-LoadFile.png
    :width: 50%
 
-What do you see? Read up a bit on `VizBin<https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-014-0066-1>__` to see how the visualization is generated. 
+What do you see? Read up a bit on `VizBin <https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-014-0066-1>`__ to see how the visualization is generated. 
 
 Now, upload the annotation.list file as an annotation file to VizBin. The annotation file contains the bin id for each of the contigs in the assembly that were binned. 
 
@@ -200,3 +200,6 @@ Now, upload the annotation.list file as an annotation file to VizBin. The annota
    
 How do the two binning methods look in comparison? 
 
+
+
+Now we will `search and compare our data <https://2017-ucsc-metagenomics.readthedocs.io/en/latest/sourmash.html>`__.
