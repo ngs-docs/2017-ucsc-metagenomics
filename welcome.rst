@@ -26,10 +26,16 @@ question will help others!
 
 Harriet Alexander - postdoc at UC Davis.
 
+Phil Brooks - postdoc at UC Davis.
+
 Titus Brown - prof at UC Davis in the School of Vet Med.
 
-4. Amazon and cloud computing - why?!
--------------------------------------
+Shannon Joslin - grad student at UC Davis.
+
+Taylor Reiter - grad student at UC Davis.
+
+4. Jetstream and cloud computing - why?!
+----------------------------------------
 
 * simplifies software installation;
 * can be used for bigger analyses quite easily;
@@ -48,10 +54,6 @@ Basic rules:
 Place the sticky notes where we can see them from the back of the room --
 e.g. on the back of your laptop.
 
-At the end of each session (coffee break, lunch, end of day) please
-write down on an index card **one thing you learned** and **one thing
-you're still confused about.**
+----
 
----
-
-Next: :doc:`n-overview`
+Next: :doc:`jetstream/boot`

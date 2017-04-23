@@ -8,9 +8,8 @@ Tutorials:
 
    index
    welcome
-   aws/index
+   jetstream/boot
    quality
-   kmer_trimming
    assemble
    prokka_tutorial
 
@@ -20,9 +19,10 @@ Tutorials:
    slice
    circos_tutorial
    workflow
+   whatnext
 
    DATA
    INSTALL
    README
-   
 
+   kmer_trimming

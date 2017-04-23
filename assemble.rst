@@ -6,15 +6,16 @@ good assembler designed for metagenomes.
 
 First, install it::
 
-   cd
-   sudo apt-get install zlib1g-dev
+
+
+   cd ~/
    git clone https://github.com/voutcn/megahit.git
    cd megahit
    make
 
 Now, download some data::
 
-   cd /mnt/data
+   cd ~/data
    curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1976948.abundtrim.subset.pe.fq.gz
    curl -O https://s3-us-west-1.amazonaws.com/dib-training.ucdavis.edu/metagenomics-scripps-2016-10-12/SRR1977249.abundtrim.subset.pe.fq.gz
 
@@ -26,8 +27,8 @@ in a fairly short time period :).
 
 Now, finally, run the assembler! ::
 
-   mkdir /mnt/assembly
-   cd /mnt/assembly
+   mkdir ~/assembly
+   cd ~/assembly
    ln -fs ../data/*.subset.pe.fq.gz .
 
    ~/megahit/megahit --12 SRR1976948.abundtrim.subset.pe.fq.gz,SRR1977249.abundtrim.subset.pe.fq.gz \
@@ -68,6 +69,7 @@ MiSeq, and PacBio? (Also see `this paper
 What kind of experimental design considerations should you have if you
 plan to assemble?
 
+
 Some figures: the first two come from work by Dr. Sherine Awad on
 analyzing the data from Shakya et al (2014).  The third comes from
 an analysis of read search vs contig search of a protein database.
@@ -80,8 +82,7 @@ an analysis of read search vs contig search of a protein database.
 
 .. thumbnail:: files/read-vs-contig-alignment.png
    :width: 20%
-
-
+   
 After the assembly is finished
 ------------------------------
 
@@ -92,3 +93,8 @@ At this point we can do a bunch of things:
 * set up a BLAST database so that we can search it for genes of interest;
 * quantify the abundance of the contigs or genes in the assembly, using the original read data set (:doc:`salmon_tutorial`);
 * bin the contigs in the assembly into species bins;
+
+
+----
+
+Next: :doc:`prokka_tutorial`
