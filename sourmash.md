@@ -28,7 +28,13 @@ Compute a scaled MinHash fingerprint from our reads:
 mkdir ~/sourmash
 cd ~/sourmash
 
-sourmash compute --scaled 10000 ~/data/SRR*.pe.fq.gz -k 21,31
+sourmash compute --scaled 10000 ~/mapping/SRR*.pe.fq -k 21,31
+```
+
+Now, compare the two files:
+
+```
+sourmash compare *.sig -k 21
 ```
 
 ## Compare reads to assemblies
@@ -38,30 +44,30 @@ Use case: how much of the read content is contained in the assembly?
 Fingerprint the assembly:
 
 ```
-sourmash compute --scaled 10000 -k 21,31 ~/assembly/combined/final.contigs.fa
+sourmash compute --scaled 10000 -k 21,31 ~/mapping/subset_assembly.fa
 ```
 
 and now evaluate *containment*, that is, what fraction of the read content is
 contained in the assembly:
 
 ```
-sourmash search -k 21 SRR1976948.abundtrim.subset.pe.fq.gz.sig \
-    final.contigs.fa.sig  --containment
+sourmash search -k 21 SRR1976948.abundtrim.subset.pe.fq.sig \
+    subset_assembly.fa.sig  --containment
 ```
 
 and you should see:
 
 ```
 1 matches; showing 3:
-         /home/titus/assembly/combined/final.contigs.fa          0.573   final.contigs.fa.sig
+         /home/titus/mapping/subset_assembly.fa          0.573   subset_assembly.fa.sig
 ```
 
 
 Try the reverse - why is it bigger?
          
 ```
-sourmash search -k 21 final.contigs.fa.sig \
-    SRR1976948.abundtrim.subset.pe.fq.gz.sig --threshold=0.0 --containment
+sourmash search -k 21 subset_assembly.fa.sig \
+    SRR1976948.abundtrim.subset.pe.fq.sig --threshold=0.0 --containment
 ```
 
 what do you get if you do this with the other set of reads?
@@ -101,7 +107,7 @@ microbial genomes from RefSeq.
 
 Next, run the 'gather' command to see what's in there --
 ```
-sourmash sbt_gather -k 21 microbes final.contigs.fa.sig
+sourmash sbt_gather -k 21 microbes subset_assembly.fa.sig
 ```
 
 and you should get:
