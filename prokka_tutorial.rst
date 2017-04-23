@@ -69,7 +69,7 @@ Questions?
 =========
 
 * What can I annotate with prokka? 
-* How do I submit my annotated files Genbank? EBI? 
+* How do I submit my annotated files to Genbank? EBI? 
 * Why is it called Prokka?
 
 
