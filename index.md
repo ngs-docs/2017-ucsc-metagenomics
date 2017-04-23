@@ -17,19 +17,21 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 [Assembling your short read data set with MEGAHIT](assemble.html)
 
-[Annotating your short-read data set with Prokka](prokka.html)
 
 ## Day 2: Morning (9am - noon)
 
-Quantifying abundance across samples with Salmon
+[Binning genomes out of your metagenome](binning.html)
 
-Binning genomes out of your metagenome
+[Quickly searching and comparing your samples with sourmash](sourmash.html)
+
 
 ## Day 2: Afternoon (1:15pm - 5pm)
 
-Circos and An'vio for viz
+[Annotating your short-read data set with Prokka](prokka.html)
 
-[Quickly searching and comparing your samples with sourmash](sourmash.html)
+[Quantifying abundance across samples with Salmon](salmon_tutorial.html)
+
+[Circos and An'vio for viz](circos.html)
 
 What next? CAzy, KEGG, etc.
 
