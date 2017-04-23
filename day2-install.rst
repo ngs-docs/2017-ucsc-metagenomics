@@ -42,7 +42,7 @@ Generate a config::
 Add a password, have it not run a browser, and put it on port 8000
 by default::
   
-  cat >>/home/ubuntu/.jupyter/jupyter_notebook_config.py <<EOF
+  cat >> ~/.jupyter/jupyter_notebook_config.py <<EOF
   c = get_config()
   c.NotebookApp.ip = '*'
   c.NotebookApp.open_browser = False
