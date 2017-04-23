@@ -35,7 +35,7 @@ Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
 
 [Circos for viz](circos_tutorial.html)
 
-What next? CAzy, KEGG, etc.
+What next? Workflows; CAzy, KEGG; etc.
 
 <!-- See [the complete table of contents](toc.html) -->
 
