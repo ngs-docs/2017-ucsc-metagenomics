@@ -55,6 +55,7 @@ Now, run! ::
 
   jupyter notebook &
 
+Type Ctrl+c
 You should be able to visit port 8000 on your computer and see the
 Jupyter console; to get the URL to Jupyter, run::
 
@@ -67,3 +68,5 @@ Jupyter console; to get the URL to Jupyter, run::
        ssh -N -f -L localhost:8000:localhost:8000 username@remotehost
 
    to tunnel the remote Jupyter notebook server over SSH.
+
+We are now ready to `map and bin reads <https://2017-ucsc-metagenomics.readthedocs.io/en/latest/binning.html>`__ .
