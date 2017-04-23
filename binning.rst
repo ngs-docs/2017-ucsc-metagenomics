@@ -155,7 +155,7 @@ Take a look at the mbin.summary file. What is shown?
 
 Now, we are going to generate a concatenated file that contains all of our genome bins put together. We will change the fasta header name to include the bin number so that we can tell them apart later. ::
 
-  for file in *fasta
+  for file in mbin.*.fasta
     do 
       num=${file//[!0-9]/}
       sed -e "/^>/ s/$/ ${num}/" mbin.$num.fasta >> binned.concat.fasta
