@@ -28,7 +28,18 @@ Compute a scaled MinHash fingerprint from our reads:
 mkdir ~/sourmash
 cd ~/sourmash
 
-sourmash compute --scaled 10000 ~/data/SRR*.pe.fq.gz -k 21,31
+sourmash compute --scaled 10000 ~/mapping/SRR*.pe.fq -k 21,31
+```
+
+Now, compare the two files at k=21:
+
+```
+sourmash compare SRR*.sig -k 21
+```
+
+or k=31:
+```
+sourmash compare SRR*.sig -k 31
 ```
 
 ## Compare reads to assemblies
@@ -38,30 +49,30 @@ Use case: how much of the read content is contained in the assembly?
 Fingerprint the assembly:
 
 ```
-sourmash compute --scaled 10000 -k 21,31 ~/assembly/combined/final.contigs.fa
+sourmash compute --scaled 10000 -k 21,31 ~/mapping/subset_assembly.fa
 ```
 
 and now evaluate *containment*, that is, what fraction of the read content is
 contained in the assembly:
 
 ```
-sourmash search -k 21 SRR1976948.abundtrim.subset.pe.fq.gz.sig \
-    final.contigs.fa.sig  --containment
+sourmash search -k 21 SRR1976948.abundtrim.subset.pe.fq.sig \
+    subset_assembly.fa.sig  --containment
 ```
 
 and you should see:
 
 ```
 1 matches; showing 3:
-         /home/titus/assembly/combined/final.contigs.fa          0.573   final.contigs.fa.sig
+         /home/titus/mapping/subset_assembly.fa          0.573   subset_assembly.fa.sig
 ```
 
 
 Try the reverse - why is it bigger?
          
 ```
-sourmash search -k 21 final.contigs.fa.sig \
-    SRR1976948.abundtrim.subset.pe.fq.gz.sig --threshold=0.0 --containment
+sourmash search -k 21 subset_assembly.fa.sig \
+    SRR1976948.abundtrim.subset.pe.fq.sig --threshold=0.0 --containment
 ```
 
 what do you get if you do this with the other set of reads?
@@ -76,7 +87,7 @@ echo 'backend : Agg' > matplotlibrc
 Do a comparison:
 
 ```
-sourmash compare *.sig -o comparison
+sourmash compare SRR*.sig subset*.sig -o comparison
 ```
 
 and then plot:
@@ -84,6 +95,9 @@ and then plot:
 ```
 sourmash plot --pdf comparison
 ```
+
+which will produce a file `comparison.matrix.pdf` and `comparison.dendro.pdf`
+that you can grab view your Jupyter Notebook console.
 
 ## What's in my metagenome?
 
@@ -101,7 +115,7 @@ microbial genomes from RefSeq.
 
 Next, run the 'gather' command to see what's in there --
 ```
-sourmash sbt_gather -k 21 microbes final.contigs.fa.sig
+sourmash sbt_gather -k 21 microbes subset_assembly.fa.sig
 ```
 
 and you should get:
@@ -117,7 +131,7 @@ p_query p_genome
 
 If you go to
 [the SRA information](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA278302)
-for this project, you'll see that Petrotoga and Mesotoga are both in there
-- yay!  Of course, in this case we're looking at largely unknown
+for this project, you'll see that Petrotoga and Mesotoga are both in
+there - yay!  Of course, in this case we're looking at largely unknown
 critters (3% at most is in genbank!) so we wouldn't expect many
 matches.
