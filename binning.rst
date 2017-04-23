@@ -124,9 +124,14 @@ Now, we are going to generate a concatenated file that contains all of our genom
 
   for num in {001..007};
     do
-      sed -e "s/>/>${num/00/} reference= /g" mbin.$num.fasta >> binned.concat.fasta
+      sed -e "/^>/ s/$/ ${num}/" mbin2.$num.fasta >> binned.concat.fasta
     done
+    
+And finally make an annotation file for visualization::
 
+  echo label > annotation.list
+  grep ">" binned.concat.fasta |cut -f2 -d ' '>> annotation.list
+  
 Visualizing the bins
 --------------------
 
@@ -138,7 +143,7 @@ First, install VizBin::
   sudo apt-get install libatlas3-base libopenblas-base
   curl -L https://github.com/claczny/VizBin/blob/master/VizBin-dist.jar?raw=true > VizBin-dist.jar
 
-VizBin can run in OSX or Linux but is very hard to install on Windows. To simplify things we are going to run VizBin in the desktop emulator through JetStream (which is ... a bit clunky). So, go back to the Jetstream
+VizBin can run in OSX or Linux but is very hard to install on Windows. To simplify things we are going to run VizBin in the desktop emulator through JetStream (which is ... a bit clunky). So, go back to the Jetstream and follow me! 
 
 
 
