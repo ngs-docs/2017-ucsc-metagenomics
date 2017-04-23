@@ -146,6 +146,24 @@ First, install VizBin::
 
 VizBin can run in OSX or Linux but is very hard to install on Windows. To simplify things we are going to run VizBin in the desktop emulator through JetStream (which is ... a bit clunky). So, go back to the Jetstream and open up the web desktop simulator. 
 
-.. thumbnail:: ../files/OpenDesktop.png
-   :width: 20%
+.. thumbnail:: ../files/VizBin-OpenDesktop.png
+   :width: 50%
+
+Open the terminal through the desktop simulator and open VizBin: ::
+
+  java -jar VizBin-dist.jar
+ 
+This should prompt VizBin to open in another window. Click the choose button to open file browser to navigate to the binning folder (~/mapping/binning). There you will find the concatenated binned fasta file (binned.concat.fasta). Upload this file and hit run. 
+
+.. thumbnail:: ../files/VizBin-LoadFile.png
+   :width: 50%
+
+What do you see? Read up a bit on `VizBin<https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-014-0066-1>__` to see how the visualization is generated. 
+
+Now, upload the annotation.list file as an annotation file to VizBin. The annotation file contains the bin id for each of the contigs in the assembly that were binned. 
+
+.. thumbnail:: ../files/VizBin-AddFiles.png
+   :width: 50%
+   
+How do the two binning methods look in comparison? 
 
