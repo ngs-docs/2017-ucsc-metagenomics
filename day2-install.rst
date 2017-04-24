@@ -55,8 +55,10 @@ Now, run! ::
 
   jupyter notebook &
 
-Type Ctrl+c
-You should be able to visit port 8000 on your computer and see the
+This will output some stuff; to make the prompt appear again, hit ENTER
+a few times.
+
+You should now be able to visit port 8000 on your computer and see the
 Jupyter console; to get the URL to Jupyter, run::
 
   echo http://$(hostname):8000/

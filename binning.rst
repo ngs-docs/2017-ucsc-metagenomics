@@ -54,7 +54,7 @@ that, we'll need `this notebook <https://github.com/ngs-docs/2017-ucsc-metagenom
 
   
   cd ~/
-  curl -O https://raw.githubusercontent.com/ngs-docs/2017-ucsc-metagenomics/pip35/files/sourmash_tetramer.ipynb
+  curl -O https://raw.githubusercontent.com/ngs-docs/2017-ucsc-metagenomics/master/files/sourmash_tetramer.ipynb
   cd -
 
 and during the mapping we'll load this notebook in the Jupyter notebook
