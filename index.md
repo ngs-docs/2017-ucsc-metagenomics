@@ -1,11 +1,11 @@
-# 2017 Metagenomics workshop at UC Santa Cruz
+# 2017 Metagenomics workshop at UC Davis
 
 Instructors: Harriet Alexander, Phillip Brooks, and C. Titus Brown
 
-TAs: Luiz Irber, Shannon Joslin, Taylor Reiter
+TAs: Jessica Blanton, Shawn Higdon, Veronika Kivenson, Jessica Mrizi, Adelaide Rhodes r
 
 These are the online materials for a metagenomics workshop hosted by
-Marilou Sison-Mangus at UC Santa Cruz on April 22nd and April 23rd, 2017.
+Data Intensive Biology Lab on July 17 to July 21st, 2017.
 
 [Etherpad](https://public.etherpad-mozilla.org/p/UCSC_metagenomics)
 
